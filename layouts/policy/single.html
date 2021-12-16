@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{- partial "header.html" . -}}
+
+
+<article class="page-main"> 
+	<section class="page-container">
+		<div class="page-content">
+			
+			<div>
+				{{  .Content | markdownify }}
+			</div>
+		
+		</div>
+	</section>
+</article>
+
+{{- partial "_contacts.html" . -}}
+{{- partial "footer.html" . -}}
+
+{{ end }}

@@ -1,0 +1,58 @@
+/*** 
+
+====================================================================
+	Clients Section
+====================================================================
+
+***/
+
+.clients-section {
+    position: relative;
+    padding: 95px 0px 70px;
+
+    .sponsors-outer {
+       
+        position: relative;
+        
+
+        .owl-dots,
+        .owl-nav {
+            position: relative;
+            display: none;
+        }
+
+        .image-box {
+            position: relative;
+            text-align: center;
+            transition: all 300ms ease;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+                width: auto;
+                opacity: 0.6;
+                transition: all 300ms ease;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    &.style-two {
+        padding-top: 0px;
+
+        .sponsors-outer {
+            padding-top: 60px;
+            border-top: 1px solid $grey22;
+        }
+    }
+
+    .sec-title-two {
+        margin-bottom: 52px;
+    }
+
+
+}

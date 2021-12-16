@@ -1,0 +1,49 @@
+<section class='fee-section fee-section--reg fee-section--merchant {{ if .padding_bottom }} pb-lg {{ end }} {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }}'>
+  <div class="row">
+    <!--Image Column-->
+    <div class="col-img col-md-6 col-sm-12 col-xs-12">
+      <div class="image img-fee">
+        <img
+          class="img-default"
+          src="{{ .img | relURL }}"
+          alt="{{ .title | truncate 100 }}"
+        />
+        <img
+          class="img-mob-2"
+          src="{{ .img | relURL }}"
+          alt="{{ .title | truncate 100 }}"
+        />
+      </div>
+    </div>
+
+    <!--Content Column-->
+    <div class="content-column col-md-6 col-sm-12 col-xs-12" style="align-self: center;">
+      <div class="auto-container">
+        
+          <h2>
+            {{ .title | truncate 100 }}
+          </h2>
+
+          {{ if .title_sub }}
+          <h5>
+            {{ .title_sub | truncate 200 }}
+          </h5>
+          {{ end }}
+        
+        <ul class="checks checks--big mt-md">
+          {{ range .lists }}
+          <li>
+            {{ if .title }}
+            <h3>{{ .title }}</h3>
+            {{ end }}
+            <p>
+              {{ .item }}
+            </p>
+          </li>
+          {{ end }}
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>

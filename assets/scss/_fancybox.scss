@@ -1,0 +1,80 @@
+/*** 
+
+====================================================================
+	Fancy Box
+====================================================================
+
+***/
+
+.fancybox {
+
+    &-next,
+    &-prev {
+        span {
+            @include sz(44px, 44px);
+
+            line-height: 44px;
+            text-align: center;
+
+            background-image: none;
+
+            &::before {
+                content: "";
+
+                @include position(absolute, (t, 0), (r, 0));
+
+                @include sz(44px, 44px);
+                @include font(12, 44, "FontAwesome");
+
+                background-color: $grey14;
+                color: $white;
+
+                visibility: visible;
+                transition: all 300ms ease;
+            }
+        }
+
+        &:hover {
+            span {
+                &:before {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    &-next {
+        span:before {
+            content: "\f178";
+        }
+    }
+
+    &-prev {
+        span:before {
+            content: "\f177";
+        }
+    }
+
+    &-type-image {
+        .fancybox-close {
+            right: 0px;
+            top: 0px;
+
+            @include sz(45px, 45px);
+
+            background: url(../../images/icons/icon-cross.png) center center no-repeat;
+            background-color: $grey6;
+
+            &:hover {
+                background-color: $black;
+            }
+    
+        }
+
+        .fancybox-skin {
+            padding: 0px;
+        }
+
+    }
+}

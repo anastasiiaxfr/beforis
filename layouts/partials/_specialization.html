@@ -1,0 +1,23 @@
+<section class='specialization-section {{ if .padding_bottom }} pb-lg {{ end }} {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }}'>
+    <div class="auto-container">
+       
+            <h2>
+                {{ .title | truncate 100 }}
+            </h2>
+       
+        <div class="inner-content">
+            <div class="services-outer">
+                <!--Specialization Block-->
+                {{ range .items }}
+                <div class="specialization-block">
+                    <div class="inner">
+                        <div class="inner-most">
+                            <img src="{{ .icon | relURL }}" alt="{{ .title | truncate 100 }}">
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

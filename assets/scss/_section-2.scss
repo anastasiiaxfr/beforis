@@ -1,0 +1,198 @@
+
+
+/*** 
+
+====================================================================
+	Projects Section
+====================================================================
+
+***/
+
+.project {
+    &-section {
+        .btn-ct {
+            margin-top: 60px;
+        }
+    
+        position: relative;
+    
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+    }
+
+    &-block {
+        position: relative;
+        margin-bottom: 80px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        .inner-box {
+            position: relative;
+
+            .content-column {
+                position: relative;
+
+                .inner-column {
+                    position: relative;
+                    z-index: 1;
+                    padding-left: 40px;
+
+                    .read-more {
+                        position: relative;
+                        color: $grey;
+                        @include font(12, 12, 700);
+                        text-transform: uppercase;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    h2 {
+                        position: relative;
+                        margin-bottom: 15px;
+                        color: $grey4;
+                       
+                        @include font(32, 32*1.2, 700);
+                    }
+
+                    a {
+                        position: relative;
+                        color: $grey4;
+                        transition: all 300ms ease;
+                    }
+
+                    .text {
+                        position: relative;
+                        margin-bottom: 18px;
+                       
+                        color: $grey19;
+                       
+                        @include font(16, 16*1.8, 400);
+                    
+                    }
+                    
+                }
+            }
+    
+            .image-column {
+                position: relative;
+
+                h2 {
+                    a:hover {
+                        text-decoration: underline;
+                        color: $grey;
+                    }
+                }
+                
+    
+                .image {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+    
+                    img {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+.project-block-two {
+    position: relative;
+    margin-bottom: 80px;
+
+    .inner-box {
+        position: relative;
+
+        .content-column {
+            position: relative;
+            text-align: right;
+
+            .inner-column {
+                position: relative;
+                z-index: 1;
+                padding-right: 40px;
+
+                a {
+                    color: $grey4;
+                    transition: all 300ms ease;
+                }
+                
+
+                h2 {
+                    position: relative;
+                    margin-bottom: 15px;
+
+                    color: $grey4;
+                    
+                    @include font(32, 32*1.2, 700);
+
+                    a:hover {
+                        color: $grey;
+                    }
+                }
+
+                .text {
+                    position: relative;
+                    margin-bottom: 18px;
+
+                    color: $grey19;
+                   
+                    @include font(16, 16*1.8, 400);
+                }
+                
+                .read-more {
+                    position: relative;
+                    
+                    color: $grey;
+                  
+                    @include font(12, 12, 700);
+                    text-transform: uppercase;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    
+                }
+            }
+        }
+
+        .image-column {
+            position: relative;
+
+            .image {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    transition: all 0.5s ease;
+                }
+                
+            }
+        }
+    }
+    
+}
+
+
+

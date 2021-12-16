@@ -1,0 +1,55 @@
+<!-- Main Menu -->
+<nav class="menu">
+  
+    <!-- Toggle Button -->
+    <button type="button" class="menu__toggle" data-target="">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </button>
+ 
+    <ul class="menu__nav">
+
+      {{ $pageLang := .Page.Lang }}
+      {{ if eq $pageLang "ru" }}
+
+      {{ range .Site.Menus.main }}
+      {{- partial "_nav-item.html" . -}}
+      {{ end }}
+
+
+      {{ else }}
+      {{ if eq $pageLang "en" }}
+
+      {{ range .Site.Menus.nav }}
+      {{- partial "_nav-item.html" . -}} 
+      {{ end }}
+
+      {{ end }}
+      {{ end }}
+      
+      
+
+      {{- partial "_lang.html" . -}}
+
+      <li class="">
+        <a class="menu-tg" href="{{ .Site.Params.telegram }}" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M22.4416 3.42856L1.71429 10.8312L7.63637 13.7922L15.3507 9.42856L10.5974 15.2727L19.4805 21.1948L22.4416 3.42856Z"
+              stroke="#4A4B56"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+</nav>
+<!-- Main Menu End-->

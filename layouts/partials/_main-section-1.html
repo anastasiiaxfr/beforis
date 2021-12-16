@@ -1,0 +1,57 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_1 }}
+{{ with $data.homepage.section_1 }}
+
+<!--Studio Section-->
+<a name="solutions"></a>
+<section class='table-section {{ if .padding_bottom }} pb-lg {{ end }} {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }}'>
+	<div class="auto-container">
+		<div class="row clearfix">
+			<!--Content Column-->
+			<div class="col-md-6 col-sm-12">
+				<div class="inner-column">
+					{{ if .title }}
+					
+						<h3> {{ .title | markdownify | truncate 100 }} </h3>
+					
+					{{ end }}
+
+					{{ if .title_sub }}
+					<h4 class="heading__subtitle">
+						{{ .title_sub | markdownify | truncate 200 }}
+					</div>
+					{{ end }}
+
+					{{ if .icons }}
+					<div class="stat-blocks">
+						{{ range .icons }}
+						<div class="stat-block">
+							<div class="top"><img src="{{ .icon }}" alt="{{ .title_sub | truncate 100 }}"><span
+									class="num">{{ .title | truncate 20}}</span></div>
+							<div class="descr">{{ .title_sub | truncate 100 }}</div>
+						</div>
+						{{ end }}
+					</div>
+					{{ end }}
+				</div>
+			</div>
+			{{ if .list }}
+			<!--Image Column-->
+			<div class="col-md-5 col-sm-12 col-md-offset-1">
+				<div class="list-bg">
+					<ul class="checks">
+						{{ range .list }}
+						<li>{{ .item | markdownify | truncate 100 }}</li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+<!--End Studio Section-->
+
+{{ end }}
+{{ end }}

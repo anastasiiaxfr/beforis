@@ -1,0 +1,203 @@
+/*** 
+
+====================================================================
+	Shop Single Section
+====================================================================
+
+***/
+
+
+
+.product-details {
+
+    .basic-details {
+        position: relative;
+        margin-bottom: 60px;
+
+        .item-quantity {
+            position: relative;
+            margin-bottom: 40px;
+
+            .field-label {
+                float: left;
+                display: inline-block;
+                margin-right: 20px;
+                
+                @include font(18, 40, 600);
+                color: $grey4;
+            }
+    
+        }
+        
+        .price {
+            position: relative;
+            margin-bottom: 30px;
+            color: $grey4;
+            @include font(18, 18, 500);
+
+            span {
+                margin-left: 10px;
+                color: $grey4;
+                @include font(22, 22, 700);
+            }
+
+            .item-quantity .bootstrap-touchspin {
+                width: 80px;
+            }
+        }
+
+        h4 {
+            margin: -5px 0px 0px;
+            padding-bottom: 20px;
+            
+            @include font(32, 32*1.2, 600);
+            color: $grey4;
+        }
+
+        .text {
+            position: relative;
+            margin-bottom: 22px;
+            padding: 25px 0px;
+            
+            @include font(16, 16*1.7, 400);
+            
+            color: $grey47;
+            border-top: 1px solid $grey34;
+            border-bottom: 1px solid $grey34;
+        }
+
+    }
+
+    .image-column,
+    .info-column {
+        margin-bottom: 20px;
+    }
+
+    .image-column {
+        .image-box {
+            padding-right: 40px;
+        }
+    
+    }
+    .info-column {
+        .inner-column {
+            position: relative;
+            padding-left: 15px;
+
+            .btn-style-eight {
+                padding: 11px 36px;
+            }
+            
+        }
+
+
+        .image-box img {
+            position: relative;
+            display: block;
+            width: 100%;
+            background-color: $grey11;
+        }
+    }
+
+}
+
+
+
+
+.product-details .basic-details .quantity-spinner,
+.cart-section input.quantity-spinner {
+    padding: 10px 15px;
+    height: 46px;
+    box-shadow: none;
+    line-height: 24px;
+}
+
+.product-details .basic-details .bootstrap-touchspin .input-group-btn-vertical>.btn,
+.cart-section .bootstrap-touchspin .input-group-btn-vertical>.btn {
+    padding: 11px 10px;
+    background: $grey48;
+}
+
+.product-details .bootstrap-touchspin .input-group-btn-vertical i,
+.cart-section .bootstrap-touchspin .input-group-btn-vertical i {
+    top: 6px;
+}
+
+.prod-tabs .tabs-content .tab .title {
+    position: relative;
+    @include margin((t, 10px), (b, 25px));
+    color: $grey49;
+   
+    @include font(2, 20, 600, $ffHeading);
+}
+
+/*** 
+
+====================================================================
+	Products Section
+====================================================================
+
+***/
+
+.products-section {
+    position: relative;
+    padding: 80px 0px 50px;
+    background-size: cover;
+
+    &:before {
+        content: "";
+        @include position(absolute, (l, 0), (t, 0));
+        display: block;
+        @include sz(100%, 100%);
+      
+        background-color: rgba($black, 0.7);
+    }
+
+    .product-column {
+        position: relative;
+    }
+
+    .content-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+            padding-left: 45px;
+
+            h2 {
+                position: relative;
+                margin-bottom: 25px;
+
+                color: $white;
+
+                @include font(48, 48*1.1, 700);
+
+                span {
+                    display: block;
+                    color: $yellow4;
+                    font-size: 40px;
+                }
+            }
+
+            .text {
+                position: relative;
+                margin-bottom: 38px;
+
+                color: $white;
+
+                @include font(18, 18*1.7, 400);
+
+                .theme-btn {
+                    padding: 13px 25px 11px;
+                    font-size: 18px;
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+}

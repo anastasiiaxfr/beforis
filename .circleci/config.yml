@@ -1,0 +1,140 @@
+version: 2.1
+
+references:
+  default_docker: &default_docker
+    - image: eu.gcr.io/tranzzo-dev/ci-cd/base:stable-scm
+      auth:
+        username: _json_key
+        password: $ACCT_AUTH_NB
+      environment:
+        PROJECT_NAME: tranzzo-prod
+        COMPUTE_ZONE: europe-west1-b
+
+commands:
+  build:
+    description: Build pipeline
+    parameters:
+      version:
+        type: string
+    steps:
+      - checkout
+      - build_url:
+          version: << parameters.version >>
+      - run:
+          name: Compile static
+          command: hugo --gc --minify --baseURL "$BASE_URL"
+      - run:
+          name: Archive build
+          command: tar -cvf build.tgz public
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build.tgz
+
+  build_url:
+    description: Build BaseURL basing on parameters
+    parameters:
+      version:
+        type: string
+    steps:
+      - run:
+          name: Build BaseURL
+          command: |
+            case << parameters.version >> in
+                prod)
+                    BASE_URL="https://beforis.com/"
+                    ;;
+                *)
+                    BASE_URL="https://<< parameters.version >>-dot-beforis-dot-tranzzo-prod.ey.r.appspot.com"
+                    ;;
+            esac
+            echo "export BASE_URL='$BASE_URL'" | tee -a $BASH_ENV
+
+  deploy:
+    description: Deploy GAE
+    parameters:
+      version:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /root/tmp
+      - run:
+          name: Restore build
+          command: tar --no-same-owner -xvf /root/tmp/build.tgz
+      - run:
+          name: Provision Google Cloud SDK
+          command: |
+            /root/setup_gcloud.sh "${ACCT_AUTH_GAE}"
+      - build_url:
+          version: << parameters.version >>
+      - run:
+          name: Deploy << parameters.version >> version
+          command: |
+            gcloud app deploy --version << parameters.version >> --no-promote app.yaml
+      - run:
+          name: Notify Chats
+          command: |
+            case << parameters.version >> in
+                prod)
+                    /root/notify-chats.sh << parameters.version >> "$BASE_URL" "releases"
+                    ;;
+                *)
+                    /root/notify-chats.sh << parameters.version >> "$BASE_URL"
+                    ;;
+            esac
+
+workflows:
+  version: 2.1
+  build_and_deploy:
+    jobs:
+      - build-test:
+          context: org-global
+          filters:
+            branches:
+              only:
+                - dev
+
+      - deploy-test:
+          context: org-global
+          requires:
+            - build-test
+
+      - build-prod:
+          context: org-global
+          filters:
+            branches:
+              only:
+                - master
+
+      - deploy-prod:
+          context: org-global
+          requires:
+            - build-prod
+
+jobs:
+  build-test:
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - build:
+          version: test
+
+  build-prod:
+    docker:
+      - image: cibuilds/hugo:latest
+    steps:
+      - build:
+          version: prod
+
+  deploy-test:
+    docker: *default_docker
+    steps:
+      - deploy:
+          version: test
+
+  deploy-prod:
+    docker: *default_docker
+    steps:
+      - deploy:
+          version: prod

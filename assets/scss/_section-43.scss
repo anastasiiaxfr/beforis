@@ -1,0 +1,118 @@
+/*Check Out Page*/
+
+.checkout-page {
+    position: relative;
+    padding: 100px 0px 80px;
+
+    .default-links {
+        position: relative;
+        margin-bottom: 40px;
+
+        li {
+            margin-bottom: 15px;
+            padding: 18px 28px;
+            
+            background: #f9f9f9;
+            border: 1px solid #ebebeb;
+            color: #797979;
+
+            @include font(17, 24, 600, $ffHeading);
+            a {
+                color: $grey;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}
+
+
+.checkout-page .payment-options li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.checkout-page .payment-options li .radio-option {
+    position: relative;
+}
+
+.checkout-page .payment-options li .radio-option label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    font-weight: 600 !important;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #797979;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.checkout-page .payment-options li .radio-option label strong {
+    font-weight: 600;
+    display: inline-block;
+    color: #797979;
+}
+
+.checkout-page .payment-options li .radio-option input[type="radio"] {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+}
+
+.checkout-page .payment-options li .radio-option #payment-3 {
+    top: 9px;
+}
+
+.checkout-page .payment-options li .what-paypall {
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.checkout-page .payment-options li .radio-option label .small-text {
+    position: relative;
+    display: none;
+    padding: 18px 26px;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 15px;
+    color: #8e8d8d;
+    border-radius: 4px;
+    line-height: 20px;
+    line-height: 1.6em;
+    margin-top: 20px;
+    background-color: #ececec;
+    font-family: "Open Sans", sans-serif;
+}
+
+.checkout-page .payment-options li .radio-option label .small-text:before {
+    position: absolute;
+    content: "";
+    left: 24px;
+    top: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #ececec;
+}
+
+.checkout-page .payment-options li .radio-option input[type="radio"]:checked+label .small-text {
+    display: block;
+}
+
+.checkout-page .payment-options li .radio-option label img {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    max-width: 100%;
+    padding-left: 30px;
+}
+
+.checkout-page .payment-options li .radio-option label img {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    max-width: 100%;
+    padding-left: 30px;
+}

@@ -1,0 +1,57 @@
+.studio-section {
+    .content-column .inner-column {
+
+        .view-projects {
+            position: relative;
+           
+            color: $grey;
+           
+            @include font(14, 14, 700);
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+      
+        .text p:last-child {
+            margin-bottom: 0px;
+        }
+
+        .styled-text {
+            position: relative;
+            margin-bottom: 25px;
+           
+            color: $grey7;
+
+            @include font(20, 20*1.6, 400, $ffText);
+            font-style: italic;
+            
+        }
+    }
+
+    .image-column {
+        position: relative;
+
+        .image {
+            position: relative;
+
+            @include pd((t, 30px), (l, 30px));
+
+            img {
+                position: relative;
+                display: block;
+                width: 100%;
+            }
+
+            &:before {
+                content: "";
+                
+                @include position(absolute, (t, 0), (l, 30px), (r, 0), (b, 30px));
+                background-color: $grey;
+            }
+        }
+    }
+}
+
+

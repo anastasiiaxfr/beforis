@@ -1,0 +1,41 @@
+
+
+/*** 
+
+====================================================================
+	Project Section Two
+====================================================================
+
+***/
+
+.project-section-two {
+    position: relative;
+    padding: 95px 0px 70px;
+
+    .items-container {
+        position: relative;
+        margin-left: 200px;
+    }
+    
+    .sortable-masonry {
+        position: relative;
+    }
+
+    .sec-title {
+        margin-bottom: 50px;
+
+        .view-project {
+            position: relative;
+            display: inline-block;
+            margin-top: 40px;
+
+            @include font(15, 15, 600);
+            text-transform: uppercase;
+            
+            border-bottom: 1px solid $grey;
+            color: $grey;
+        }
+    }
+}
+
+

@@ -1,0 +1,105 @@
+
+/*** 
+
+====================================================================
+	Experts Section
+====================================================================
+
+***/
+
+.experts-section {
+    position: relative;
+    padding-top: 75px;
+    z-index: 1;
+
+    .sec-title-two {
+        margin-bottom: 50px;
+    }
+
+    .team-block {
+        position: relative;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+.team-block .inner-box {
+    position: relative;
+
+    .image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .lower-box {
+        position: relative;
+        padding-top: 18px;
+
+        h3 {
+            position: relative;
+
+            @include font(17, 17, 600);
+            text-align: center;
+
+            a {
+                position: relative;
+                color: $white;
+            }
+            
+        }
+    }
+
+    .overlay-box {
+        @include position(absolute, (l, 0), (b, 0));
+        @include sz(100%, 100%);
+        text-align: center;
+   
+        color: $white;
+        background: $grey24;
+        opacity: 0;
+        
+        transform: translate(0, -30px);
+        transition: all 0.3s ease;
+       
+        .social-links li {
+            position: relative;
+            display: inline-block;
+            margin: 0px 12px;
+            line-height: 24px;
+
+            a {
+                position: relative;
+                color: $grey5;
+                font-size: 20px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $white;
+                }
+              
+            }
+        }
+
+        &:hover .overlay-box {
+            opacity: 1;
+            transform: translate(0, 0px);
+        }
+
+        .social-links {
+
+            @include position(absolute, (l, 0), (b, 30px));
+            width: 100%;
+        }
+      
+    }
+    
+}
+

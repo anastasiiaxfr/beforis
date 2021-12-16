@@ -1,0 +1,178 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+{{- partial "header.html" . -}}
+
+<div class="page--taxation">
+
+<!-- BEGIN hero -->
+<!-- 
+{{ if $data.taxation.hero }}
+	{{ with $data.taxation.hero }}
+
+    {{ partial "_hero-single.html" . }}
+    
+	{{ end }}
+{{ end }}
+-->
+
+{{ if .Params.hero.enable }}
+	{{ with .Params.hero }}
+
+    {{ partial "_hero-single.html" . }}
+    
+	{{ end }}
+{{ end }}
+<!-- END hero -->
+
+
+<!-- BEGIN section -->
+<!-- {{ if $data.taxation.benefits }}
+	{{ with $data.taxation.benefits }}
+
+    <section class="checks-section">
+        <div class="auto-container">
+    
+            <div class="sec-title ">
+                <h3>
+                    {{ .title | truncate 100 }}
+                </h3>
+            </div>
+
+            <ul class="checks checks--big">
+                {{ range .items }}
+                <li>
+                    <h3>
+                        {{ .title | markdownify }}
+                    </h3>
+                    <p>
+                        {{ .content }}
+                    </p>
+                </li>
+                {{ end }}
+            </ul>
+
+            {{ if .btn }}
+            <div class="btn-ct">
+                <a href="{{ .btn.url }}" class="btn-style-five">
+                    <span>
+                        {{ .btn.label }}
+                    </span>
+                </a>
+            </div>
+            {{ end }}
+    
+        </div>
+    </section>
+
+    {{ end }}
+{{ end }}  -->
+
+{{ if .Params.benefits.enable }}
+	{{ with .Params.benefits }}
+
+    <section class='checks-section {{ if .padding_bottom }} pb-lg {{ end }} {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }}'>
+        <div class="auto-container">
+    
+            
+                <h2 class="text-center">
+                    {{ .title | truncate 100 }}
+                </h2>
+          
+
+            <ul class="checks checks--big mt-md">
+                {{ range .items }}
+                <li>
+                    <h3>
+                        {{ .title | markdownify }}
+                    </h3>
+                    <p>
+                        {{ .content }}
+                    </p>
+                </li>
+                {{ end }}
+            </ul>
+
+            {{ if .btn }}
+            <div class="text-center mt-md">
+                <a href="{{ .btn.url }}" class="btn-main" rule="button">
+                   {{ .btn.label }}
+                </a>
+            </div>
+            {{ end }}
+    
+        </div>
+    </section>
+
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.taxation.domains }}
+	{{ with $data.taxation.domains }}
+    {{ .Scratch.Set "pdt" "0" }}
+    {{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.domains.enable }}
+	{{ with .Params.domains }}
+        {{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.taxation.rates }}
+	{{ with $data.taxation.rates }}
+    {{ .Scratch.Set "pdt" "0" }}
+    {{ partial "_pricing.html" . }}
+    {{ end }}
+{{ end }}  -->
+
+{{ if .Params.rates.enable }}
+	{{ with .Params.rates }}
+        {{ partial "_pricing.html" . }}
+    {{ end }}
+{{ end }} 
+
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.taxation.hero }}
+	{{ with $data.taxation.hero }}
+        {{- partial "_partners.html" . -}}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.hero.enable }}
+	{{ with .Params.hero }}
+        {{- partial "_partners.html" . -}}
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.taxation.str }}
+{{ with $data.taxation.str }}
+
+	{{ .Scratch.Set "pdt" "0" }}
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }} -->
+{{ if .Params.str.enable }}
+{{ with .Params.str }}
+
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }}
+<!-- END section -->
+
+{{- partial "_contacts.html" . -}}
+</div>
+
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}}
+{{ end }}

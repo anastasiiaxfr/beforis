@@ -1,0 +1,309 @@
+:root {
+  --ffPrimary: "Montserrat";
+  --ffSecondary: "Open Sans";
+  --ffInfo: "Hind";
+  --ffBack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+}
+
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+
+  margin: 0px;
+  padding: 0px;
+
+  border: none;
+  outline: none;
+
+  &::selection {
+    background-color: $white;
+  }
+}
+
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  
+  font-family: $ffText;
+}
+
+body {
+  color: $grey4;
+  background: $white;
+  
+  @include font(15, 15*1.8, 400, $ffHeading);
+
+
+  &::-webkit-scrollbar {
+    @include sz(10px, 10px);
+    &-track {
+      -webkit-box-shadow: inset 0 0 6px rgba($black, 0.3);
+    }
+    &-thumb {
+      background: $black;
+    }
+  }
+}
+
+
+button,
+a,
+input {
+
+  &:hover,
+  &:active,
+  &:focus {
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+
+/*** 
+  
+  ====================================================================
+      Global Settings
+  ====================================================================
+  
+   ***/
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $grey;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin: 0px;
+  background: none;
+
+  font-weight: normal;
+  line-height: 1.6em;
+  font-family: $ffHeading;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: $ffHeading;
+}
+
+textarea {
+  overflow: hidden;
+}
+
+.theme_color {
+  color: $grey;
+}
+
+p,
+.text {
+  position: relative;
+  line-height: 1.8em;
+  // font-family: "Open Sans", sans-serif;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.auto-container {
+  position: static;
+  max-width: 1330px;
+  
+  padding: 0px 15px;
+  margin: 0 auto;
+
+  .hero & {
+    width: 100%;
+  }
+
+  @include maw(728){
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include maw(420){
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 300px;
+  /*padding:0px 70px 70px;*/
+}
+
+.grey-bg {
+  background-color: $grey20;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.theme-btn {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.centered {
+  text-align: center;
+}
+
+/*List Style One*/
+
+.list-style-one {
+  position: relative;
+
+  li {
+    position: relative;
+
+    padding-left: 62px;
+    margin-bottom: 25px;
+
+    color: $black;
+
+    @include font(16, 16*1.5, 400, $ffText);
+
+    &:nth-child(1) .icon,
+    &:nth-child(3) .icon {
+      font-size: 32px;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .icon {
+      @include position(absolute, (l, 0), (t, 0));
+      margin-bottom: 6px;
+      color: $black;
+      @include font(28, 28, 400);
+  
+    }
+  }
+
+}
+
+
+/*List Style Two*/
+
+.list-style {
+
+  &-two {
+    position: relative;
+  
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 30px;
+      color: $white;
+     
+      @include font(15, 15, 500);
+  
+      &:before {
+        @include position(absolute, (l, 0), (t, 1px));
+   
+        content: "\f00c";
+        color: $white;
+  
+        @include font(14, 14, 400, "FontAwesome");
+       
+      }
+  
+    }
+  }
+
+  &-three {
+    position: relative;
+  
+    li {
+      position: relative;
+      
+      margin-bottom: 4px;
+      padding-left: 30px;
+      
+      color: $grey15;
+  
+      @include font(17, 17, 500, $ffHeading);
+  
+      &:before {
+        @include position(absolute, (l, 0), (t, 1px));
+        content: "\f00c";
+  
+        color: $grey15;
+        @include font(14, 14, 400, "FontAwesome");
+        
+      }
+    }
+  }
+
+
+  &-four {
+    position: relative;
+  
+    li {
+      position: relative;
+  
+      margin-bottom: 4px;
+      padding-left: 30px;
+  
+      @include font(16, 16, 400, $ffText);
+   
+  
+      &:before {
+        @include position(absolute, (l, 0), (t, 1px));
+        content: "\f00c";
+     
+        color: $grey;
+        @include font(14, 14, 400, "FontAwesome")
+        
+      }
+    }
+  
+  }
+
+}
+
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}

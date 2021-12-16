@@ -1,0 +1,38 @@
+<ul class="checks list-location">
+  {{ $count := slice }}
+  {{ range $i, $arr := .Data.Pages }} 
+  {{ $count = $count | append $i }}
+  {{ end }}
+
+  {{ if gt (len $count) 4 }}
+      
+  {{ range $i, $arr := .Data.Pages }} 
+  {{ if not .Params.draft }}
+
+  {{ if .Params.country_title}}
+  <li>
+    <a href="{{ .Permalink | relURL }}">
+      {{ .Params.country_title | truncate 50 }}
+    </a> 
+  </li>
+  {{ end }} 
+  {{ end }}
+  {{ end }}
+
+  {{ else }}
+ 
+  {{ if .Params.geo }}
+    {{ range first 50 .Params.geo.list }}
+    <li> 
+        <!-- <a href="{{ .url }}{{ .code }}"> -->
+           {{ .item | truncate 50 }} 
+        <!-- </a> -->
+    </li>
+    {{ end }} 
+
+  {{ end }}
+
+
+
+  {{ end }}
+</ul>

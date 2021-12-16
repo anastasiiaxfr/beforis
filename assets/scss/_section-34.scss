@@ -1,0 +1,26 @@
+.table-section {
+    &--reg {
+        padding-top: 0;
+    }
+
+    &--maintenance {
+        padding-bottom: 0;
+        .subtitle {
+            margin-bottom: 32px;
+
+            @include font(24, 24*1.2, 400);
+        }
+
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col-md-5 {
+            align-items: stretch;
+            display: flex;
+        }
+    }
+
+}

@@ -1,0 +1,39 @@
+
+.thanks-page {
+    height: 100vh;
+    background: $grey13;
+
+    .main-header .main-box .outer-container {
+        border-bottom: none;
+    }
+
+    &-section {
+
+        @include flex(flex, center, center, wrap);
+        height: calc(100vh - 71px);
+    
+        & > div {
+            text-align: center;
+        }
+    
+        h2 {
+            width: 100%;
+            
+            @include font(32, 32, bold, $ffHeading);
+            color: $grey4;
+           
+        }
+    
+        img {
+            width: 80px;
+            margin-bottom: 50px;
+        }
+        
+        p {
+            @include font(17, 17, 600);
+        }
+        
+    }
+}
+
+

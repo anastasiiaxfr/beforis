@@ -1,0 +1,106 @@
+# hero #
+hero:
+  enable: true
+
+  hero_title_sup: "5+ YEARS OF TRUST AND SUCCESS IN THE NICHE"
+  hero_title: "Complex solutions to bring your business abroad"
+
+  hero_title_sub: "150+ companies registered in Europe, Asia and offshore"
+  hero_bg: "/images/bg/home-main.jpg"
+  hero_btn_label: "Get a consultation"
+  hero_btn_url: "#contact"
+
+# section 1 #
+section_1: 
+  enable: true
+
+  padding_top: false
+  padding_bottom: false
+  padding_top_bottom: true
+  padding_default: false
+  padding_none: false 
+
+  title: "We resolve the following issues"
+  title_sub: "If you want to expand your business internationally, the Beforis experts will assist you from the idea to the profit."
+  icons:
+  - icon: "/images/icons/client.svg"
+    title: "100+" 
+    title_sub: "HAPPY CLIENTS"
+  - icon: "/images/icons/files.svg"
+    title: "200+" 
+    title_sub: "OPENED ACCOUNTS"
+  list: 
+    - item: "Analysis and entrance of new markets"
+    - item: "Acquiring in foreign banks" 
+    - item: "Сurrency risks reductions" 
+    - item: "Tax burden decrease" 
+    - item: "Assets protection" 
+    - item: "Implementation of the projects that aren’t regulated by local legislation" 
+
+# section 2 #
+section_2: 
+  enable: true
+  padding_top: false
+  padding_bottom: false
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: true
+  title: "Our team specializes in corporate structuring of any complexity"
+  title_sub: "Regardless of your legal or financial structure, we will bring your project to perfection."
+  lists: 
+    - item: "Legal and financial consulting"
+    - item: "Analysis and preparation of primary documentation"
+    - item: "Registration of companies abroad"
+    - item: "Tax planning"
+    - item: "Opening current accounts in foreign banks"
+    - item: "Opening accounts in non-banking financial institutions"
+    - item: "Obtaining financial and other licenses"
+    - item: "Banking support"
+    - item: "Structuring operational activities"
+    
+# section 4 #
+section_4: 
+  enable: true
+ 
+  padding_top: true
+  padding_bottom: false
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: false 
+  title: "Outsourced Managment"
+  subtitle: "Our services can be provided to enterprises directly or via our network of partners."
+  num: "03"
+  items:
+    - icon: "/images/icons/i6.png"
+      title: "RISK MANAGEMENT"
+      description: "We have accumulated vast experiance in risk management and mitigation across a number of industry sectors. We can offer our expert insight across your business. We offer risk assessment and mitigation services for a number of industries..."
+    - icon: "/images/icons/i7.png"
+      title: "CUSTOMER SUPPORT IN DIFFERENT LANGUAGES"
+      description: "We strive to exceed customers expectation when it comes to customer service. we	assess players’ particular solution holistically and offer a solution that	builds trust through quick response and transparency."
+  button: 
+    enable: true
+    url: "#form"
+    label: "Run with Us"
+
+
+# section 5 #
+section_5: 
+  enable: true
+  padding_top: true
+  padding_bottom: false
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: false 
+  title: "Advertising"
+  num: "04"
+  items:
+    - icon: "/images/icons/i1.png"
+      title: "PUBLISHERS"
+      description: "We provide the best terms and conditions for our clients. With a specific focus on a wide range of both new and unique products...."
+    - icon: "/images/icons/i2.png"
+      title: "ADVERTISERS"
+      description: "We provide high level programs that fit within your niche with commission levels that offer the most attractive opportunities and earnings per click..."
+  button: 
+    enable: true
+    url: "#form"
+    label: "Run with Us"

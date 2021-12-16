@@ -1,0 +1,93 @@
+{{ if .HasChildren }}
+
+
+<li class="dropdown__item dropdown">
+  <a class="dropdown__link" href="{{ .URL | relLangURL }}" role="button" data-toggle="dropdown-1" aria-haspopup="true" aria-expanded="false">
+    {{ .Name }} <i class="fa fa-angle-down"></i>
+  </a>
+
+   <ul class="dropdown-level-0">
+    {{ range .Children }} {{ if .HasChildren }}
+    <li class="dropdown__list">
+      <b class="dropdown__heading"> {{ .Name }} </b>
+
+      <ul class="dropdown-level-1">
+        {{ range .Children }}
+        <li class="dropdown__list {{ if .HasChildren }} dropdown--children {{ end }}">
+          {{ if .HasChildren }}
+
+          <div class="dropdown dropdown-1">
+
+            <strong>
+              <span class="fa fa-angle-left" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+
+              <a class="dropdown__url" href="{{ .URL | relLangURL }}">
+                {{ .Name }}
+              </a>
+            </strong>
+    
+
+            {{ $count := slice }} {{ if .HasChildren }}
+            <ul class="dropdown-level-2">
+              {{ range $i, $item := first 8 .Children }} {{ $count = $count | append $i }}
+              <li>
+                <a class="dropdown__url" href="{{ .URL | relLangURL }}">
+               
+                  <strong>
+                    {{ $findUrl := slice }}
+                    {{ range $index, $el := (split .URL "/") }}
+                      {{ if gt (len . ) 0 }}
+                      {{ $findUrl = uniq ($findUrl | append .)  }}
+                      {{ end }}
+                    {{ end }}
+                    {{ $url := "/" }}
+                    
+                    {{ $flag := last 1 $findUrl }}
+                    {{ $flag = delimit $flag ""  }}
+                    
+                    {{ if not (in $flag "#geo") }}
+                    <img width="33" height="20" class="dropdown-flag" src="/images/flag/{{ $flag }}.jpg" alt="{{ .Name }}"> 
+                    {{ end }}
+                    {{ .Name }}
+                  </strong>
+
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+
+     
+          </div>
+
+          {{ else }}
+          <a class="dropdown__url" href="{{ .URL | relLangURL }}">
+            <strong>
+              {{ .Name }}
+            </strong>
+          </a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+
+    </li>
+    {{ else }}
+    <li class="dropdown__list">
+      <a class="dropdown__url" href="{{ .URL | relLangURL }}">
+        <strong>
+          {{ .Name }}
+        </strong>
+      </a>
+    </li>
+    {{ end }} {{ end }}
+   </ul>
+
+</li>
+
+
+{{ else }}
+<li class="dropdown__item">
+  <a class="dropdown__link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+</li>
+{{ end }}

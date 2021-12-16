@@ -1,0 +1,150 @@
+
+
+/*** 
+
+====================================================================
+	Fluid Section Two
+====================================================================
+
+***/
+
+.fluid-section-two {
+    position: relative;
+    padding: 0px;
+   
+    background-color: $grey56;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        
+        @include font(absolute, (t, 0));
+
+        @include sz(36%, 100%);
+        
+        background: $grey;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        @include font(absolute, (l, 0), (t, 0));
+        @include sz(100%, 100%);
+        
+        background: $grey57;
+        opacity: 0.8;
+    }
+
+ 
+    .outer-container {
+        position: relative;
+        z-index: 2;
+
+        .left-column {
+            position: relative;
+            float: left;
+            width: 36%;
+
+            .inner {
+                position: relative;
+                max-width: 550px;
+                padding: 90px 20px 90px 0px;
+            
+                h2 {
+                    position: relative;
+                    margin-bottom: 20px;
+                   
+                    @include font(35, 35*1.4, 700);
+                   
+                    color: $grey54;
+            
+                    span {
+                        color: $white;
+                        display: block;
+                        font-size: 45px;
+                    }
+                    
+                }
+
+                .big-text {
+                    position: relative;
+                    margin-bottom: 15px;
+                    color: $white;
+                    
+                    @include font(22, 22*1.6, 300, $ffText);
+               
+                }
+
+                .text {
+                    position: relative;
+                    color: $white;
+                   
+                    @include font(16, 16*1.8, 400);
+
+                }
+            }
+        }
+
+        .outer-container .right-column {
+            position: relative;
+            float: left;
+            width: 64%;
+        
+            .inner-box {
+                position: relative;
+                padding: 80px 15px 80px 50px;
+            
+                h2 {
+                    position: relative;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    
+                    @include font(35, 35*1.2, 700);
+                    color: $white;
+                
+                    &:after {
+                        content: "";
+                        @include position(absolute, (l, 109%), (b, 7px));
+                        @include sz(35px, 2px);
+                       
+                        background-color: $grey;
+                    }
+                }
+                
+                
+            }
+            
+        }
+
+        
+    }
+    
+    .since-year {
+        @include position(absolute, (l, 50px), (b, 40px));
+        
+        display: inline-block;
+
+        @include font(20, 20, 400);
+        font-family: "Playfair Display", serif;
+
+        color: $grey16;
+        z-index: 10;
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+
+        &:before {
+            content: "";
+
+            @include position(absolute, (l, 109%), (b, 7px));
+            @include sz(35px, 2px);            
+       
+            background-color: $grey16;
+        }
+        
+    }
+}
+

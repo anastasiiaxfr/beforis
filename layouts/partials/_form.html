@@ -1,0 +1,49 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<!--Form Column-->
+<div class="inner-column">
+  <!-- Default Form -->
+  <div class="default-form">
+    <!--Default Form-->
+    <form
+      method="{{ .Site.Params.form.method }}"
+      novalidate
+      id="javascript_form"
+      class="js-form"
+    >
+      {{ range .Site.Params.form.field }}
+
+      <div class="form-group">
+        {{ if eq .type "submit" }}
+        <div id="cf-submit">
+          <div class="form-group">
+            <button
+              id="js_send"
+              class="btn-main"
+              name="{{ .name }}"
+              type="{{ .type }}"
+            >
+              {{ .placeholder }}
+            </button>
+          </div>
+        </div>
+        {{ else }}
+
+        <input
+          name="{{ .name }}"
+          placeholder="{{ .placeholder }}"
+          required="{{ .required }}"
+          type="{{ .type }}"
+          data-validate-field="{{ .name }}"
+        />
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <!-- <div class="form-group"><textarea name="sub" placeholder="По какому вопросу нужна помощь?"></textarea></div> -->
+    </form>
+  </div>
+</div>
+<!--End Default Form -->
+
+

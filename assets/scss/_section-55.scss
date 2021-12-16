@@ -1,0 +1,50 @@
+
+.main-image-box {
+    position: relative;
+
+    .image-column {
+        position: relative;
+        margin-bottom: 30px;
+
+        .image {
+            position: relative;
+
+            img {
+                position: relative;
+                display: block;
+                width: 100%;
+            }
+        }
+        
+    }
+
+    .content-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+            padding: 150px 70px 140px;
+            background-color: $grey4;
+
+            ul {
+                position: relative;
+
+                li {
+                    position: relative;
+                    margin-bottom: 24px;
+                    
+                    color: $white;
+
+                    @include font(22, 22, 400, $ffHeading);
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+

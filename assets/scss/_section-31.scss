@@ -1,0 +1,234 @@
+
+/*** 
+
+====================================================================
+	Services Page Section
+====================================================================
+
+***/
+
+.services-page-section {
+    position: relative;
+    padding: 90px 0px 20px;
+}
+
+.services-page-section .services-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.services-page-section .services-title .title {
+    position: relative;
+    color: #494b55;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+.services-page-section .services-title h2 {
+    position: relative;
+    color: #494b55;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: 30px;
+}
+
+.services-page-section .services-title h2:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0px;
+    width: 90px;
+    height: 3px;
+    margin-left: -45px;
+    background-color: #bdaca8;
+}
+
+/*Services Block*/
+
+.service-block {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.service-block .inner-box {
+    position: relative;
+  
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.service-block .inner-box .image-column,
+.service-block .inner-box .content-column {
+    position: relative;
+    padding: 0px;
+}
+
+.service-block .inner-box .image-column .image {
+    position: relative;
+}
+
+.service-block .inner-box .image-column .image img {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.service-block .inner-box .content-column .inner-column {
+    position: relative;
+    padding: 45px 55px 20px;
+}
+
+.service-block .inner-box .content-column .inner-column h2 {
+    position: relative;
+    color: #494b55;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.service-block .inner-box .content-column .inner-column h2:after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    bottom: 0px;
+    width: 35px;
+    height: 2px;
+    background-color: #bdaca8;
+}
+
+.service-block .inner-box .content-column .inner-column .text {
+    position: relative;
+    color: #797979;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.service-block .inner-box .content-column .inner-column ul {
+    position: relative;
+}
+
+.service-block .inner-box .content-column .inner-column ul li {
+    position: relative;
+    color: #797979;
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Services Block Two*/
+
+.service-block-two {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.service-block-two .inner-box {
+    position: relative;
+    background-color: #494b55;
+   
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.service-block-two .inner-box .image-column,
+.service-block-two .inner-box .content-column {
+    position: relative;
+    padding: 0px;
+}
+
+.service-block-two .inner-box .image-column .image {
+    position: relative;
+}
+
+.service-block-two .inner-box .image-column .image img {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.service-block-two .inner-box .content-column .inner-column {
+    position: relative;
+    padding: 45px 55px 20px;
+}
+
+.service-block-two .inner-box .content-column .inner-column h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.service-block-two .inner-box .content-column .inner-column h2:after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    bottom: 0px;
+    width: 35px;
+    height: 2px;
+    background-color: #bdaca8;
+}
+
+.service-block-two .inner-box .content-column .inner-column .text {
+    position: relative;
+    color: #bbbbbb;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.service-block-two .inner-box .content-column .inner-column ul {
+    position: relative;
+}
+
+.service-block-two .inner-box .content-column .inner-column ul li {
+    position: relative;
+    color: #bbbbbb;
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.team-page-section {
+    position: relative;
+    padding: 90px 0px 60px;
+}
+
+.team-page-section .team-title {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 60px;
+}
+
+.team-page-section .team-title h2 {
+    position: relative;
+    font-size: 35px;
+    font-weight: 600;
+    color: #494b55;
+    line-height: 1.2em;
+    margin-bottom: 2px;
+}
+
+.team-page-section .team-title .text {
+    position: relative;
+    font-size: 20px;
+    color: #494b55;
+    font-weight: 300;
+}
+
+.team-page-section .team-title:after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 2px;
+    background-color: #bdaca8;
+}

@@ -1,0 +1,23 @@
+str:
+  enable: true
+  padding: bottom
+  title_sub: "4 steps and your company is registered."
+  items: 
+    - num: "1"
+      icon: "../images/steps/2.svg"
+      title: "CONSULTATION"
+      description: "We meet and discuss your goals and wishes. After that, the manager will make several price offers."
+    - num: "2"
+      icon: "../images/steps/4.svg"
+      title: "APPROVAL"
+      description: "We select and agree on the best option for incorporation. The terms are captured in the contract."
+    - num: "3"
+      icon: "../images/steps/6.svg"
+      title: "PAYMENT"
+      description: "You pay for the list of services specified in the contract, we prepare documents and start the registration process of your company."
+    - num: "4"
+      icon: "../images/steps/8.svg"
+      title: "REGISTRATION"
+      description: "Our manager monitors the entire process of incorporation. We send you a ready-made documentation package when everything is done."
+
+

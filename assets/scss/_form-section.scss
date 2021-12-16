@@ -1,0 +1,220 @@
+/*** 
+
+====================================================================
+	Default Form
+====================================================================
+
+ ***/
+
+ .default-form {
+    position: relative;
+
+
+    .form-group {
+        position: relative;
+        margin-bottom: 18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        textarea, input {
+          
+            &::-webkit-input-placeholder {
+                color: $grey4;
+            }
+        }
+
+        textarea {
+            position: relative;
+            display: block;
+            
+            @include sz(100%, 125px);
+            padding: 10px 0px;
+            
+            @include font(15, 24, 400);
+
+            resize: none;
+            
+            background: none;
+            border-bottom: 1px solid $grey4;
+            color: $grey10;
+            
+            transition: all 300ms ease;
+        }
+
+
+        input,
+        select {
+            position: relative;
+            display: block;
+            padding: 10px 10px;
+            
+            @include sz(100%, 60px);
+           
+            @include font(16, 18, 400);
+           
+            color: $grey4;
+            background: none;
+            border-bottom: 1px solid $grey4;
+           
+            transition: all 300ms ease;
+        }
+
+    }
+
+
+    button {
+        margin-top: 50px;
+    }
+
+    &.style-two .form-group {
+
+        textarea, input {
+            color: $white;
+            border-color: $white;
+            
+            &::-webkit-input-placeholder {
+                color: $white;
+                font-weight: 600;
+            }
+        }
+  
+    }
+
+   
+
+}
+
+
+/*** 
+
+====================================================================
+	Form Section
+====================================================================
+
+***/
+.form-section {
+
+    position: relative;
+    padding: 60px 0;
+
+    background-color: $grey13;
+
+    .default-form .form-group {
+
+        @include maw(968) {
+            max-width: 100%;
+        }
+
+        input {
+            height: 50px;
+
+            @include font(14, 14, 600);
+        }
+
+        textarea {
+            @include font(14, 14, 600);
+        }
+    }
+
+    p {
+        @include font(14, 14*1.6, 600);
+    }
+
+
+    a {
+        font-weight: 600;
+        color: inherit;
+    }
+
+    .subtext {
+        margin-bottom: 30px;
+
+        @include font(15, 15*1.8, 700);
+    }
+
+    .sec-title-two {
+        margin-bottom: 11px;
+    }
+
+    .form-column {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+
+        @include maw(960) {
+            padding-bottom: 40px;
+        }
+
+        .inner-column {
+            position: relative;
+           
+            @include maw(798) {
+                padding: 0;
+            }
+
+        }
+    }
+
+    .theme-btn {
+        min-width: 250px;
+        color: $grey13;
+        text-transform: capitalize;
+
+        &:hover {
+            color: $grey4;
+        }
+    }
+
+    .info-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+            padding-left: 40px;
+            border-left: 1px solid $grey7;
+
+            @include maw(998) {
+                border: none;
+                padding: 0;
+            }
+        }
+    }
+
+    .contact {
+        &-title {
+            position: relative;
+            @include flex(flex, center, flex-start, nowrap);
+
+            margin-bottom: 16px;
+
+            @include font(16, 16*1.3, 700);
+            text-transform: uppercase;
+
+        }
+
+        &-text {
+            @include font(16, 16*2.4, 60, $ffHeading);
+
+            & > div + div {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .row {
+        @include flex(flex, center, space-between, nowrap);
+        max-width: 1170px;
+        @include padding((l, 15px), (r, 15px));
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        @include maw(728){
+            flex-wrap: wrap;
+        }
+    }
+}
+

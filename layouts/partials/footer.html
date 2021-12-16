@@ -1,0 +1,57 @@
+{{ "<!-- Footer -->" | safeHTML }}
+
+
+<!--Scroll to top-->
+<div class="scroll-top">
+    <span class="fa fa-angle-double-up"></span>
+</div>
+
+
+  <!--Main Footer-->
+  <footer class="main-footer">
+    <div class="auto-container">
+    <div class="widgets-section">
+        <div class="row clearfix">
+            
+       
+<!--Footer Column-->
+<div class="footer-column col-md-3 col-sm-3 col-xs-12">
+    <div class="footer-widget logo-widget">
+        
+        {{ .Scratch.Set "img" .Site.Params.logo_white }}
+        {{ .Scratch.Set "logo_w" 170 }}
+        {{- partial "_logo.html" . -}}
+
+    </div>
+</div>
+
+{{ range .Site.Params.footer.col }}
+<div class="footer-column col-md-3 col-sm-3 col-xs-12">
+    <div class="footer-widget links-widget">
+        <h2>{{ .title }}</h2>
+        <ul>
+            {{ range .links }}
+            <li>
+                <a href="{{ with index . 1 }}{{  . | relLangURL }}{{ end }}" class="text-link">
+                    {{ with index . 0}}
+                        {{ . | markdownify }}
+                    {{ end }} 
+                </a>
+            </li>
+            {{ end }} 
+        </ul>
+
+        {{ if .content }}
+        <div class="copyright">
+            {{ .content | markdownify | truncate 120 }}            
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+</div>
+</div>
+</div>
+</footer>
+<!--Main Footer-->

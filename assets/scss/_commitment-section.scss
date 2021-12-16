@@ -1,0 +1,118 @@
+
+
+/*** 
+
+====================================================================
+	Commitment Section
+====================================================================
+
+***/
+
+.commitment-section {
+    position: relative;
+    background-color: $grey26;
+
+    .outer-container {
+        position: relative;
+
+        .image-column {
+            @include position(absolute, (t, 0), (l, 0));
+            float: left;
+            @include sz(50%, 100%);
+         
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+            &:after {
+                content: "";
+
+                @include position(absolute, (r, 0));
+
+                @include sz(130px, 100%);
+
+                background-color: $grey26;
+                border-left: 30px solid $white;
+            }
+
+            .image-box {
+                position: relative;
+                display: none;
+
+                img {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .content-column {
+        position: relative;
+        width: 50%;
+        float: right;
+
+        .inner-column {
+            position: relative;
+            max-width: 700px;
+            margin-left: -100px;
+            padding: 95px 15px 78px 70px;
+
+            .content {
+                position: relative;
+            }
+
+            h2 {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 22px;
+                
+                @include font(35, 35*1.1, 700);
+              
+                color: $white;
+
+                &:before {
+                    content: "";
+
+                    @include position(absolute, (l, 105%), (b, 5px));
+                    @include sz(35px, 2px);
+                    
+                    background-color: $grey;
+                }
+            }
+
+            .big-text {
+                position: relative;
+                margin-bottom: 10px;
+                
+                color: $white;
+                @include font(22, 22, 500, $ffHeading);
+            }
+
+            .text {
+                position: relative;
+                margin-bottom: 22px;
+                
+                color: $white;
+                
+                @include font(16, 16*1.8, 400);
+            }
+            
+        }
+    }
+
+    &.style-two {
+        background: $grey27 url(../../images/resource/pattern-5.png);
+        background-position: right top;
+        background-repeat: no-repeat;
+
+        .outer-container .image-column:after {
+            border-color: $grey27;
+            background-color: $grey27;
+        }
+        
+    }
+}
+
+

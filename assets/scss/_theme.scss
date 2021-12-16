@@ -1,0 +1,69 @@
+/*Dark Layout*/
+
+.dark-layout {
+    .main-header {
+        .main-box {
+            .outer-container {
+                border-color: rgba($white, 0.1);
+            }
+        }
+    }
+
+    .main-footer {
+        background-color: $grey28;
+    }
+
+    .commitment-section {
+        &,
+        & .outer-container .content-column .inner-column {
+            background-color: $grey29;
+        }
+    }
+
+    .sec-title .title,
+    .commitment-section .content-column .inner-column {
+        .big-text, .text {
+            color: rgba($white, 0.7);
+        }
+    }
+
+    .list-style-two li {
+        &, &:before {
+            color: rgba($white, 0.7);
+        }
+    }
+
+    .commitment-section .outer-container .image-column:after {
+        border-color: $grey28;
+    }
+
+    .left-info-bar .number {
+        color: rgba($white, 0.7);
+    }
+
+    .clients-section.style-two .sponsors-outer {
+        border-color: rgba($white, 0.5);
+    }
+
+    .project-section-two .filters .filter-tabs .filter {
+        color: rgba($white, 0.7);
+
+        &:after {
+            background-color: rgba($white, 0.5);
+        }
+    }
+
+    .fixed-header {
+        border-color: rgba($white, 0.1);
+    }
+
+    .sec-title-two h2,
+    .main-menu .navigation > li > a,
+    .main-header .nav-outer .search-box-outer,
+    .architecture-block .inner-box .lower-box h3 {
+        &,
+        & a {
+            color: $white;
+        }
+    }
+}

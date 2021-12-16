@@ -1,0 +1,93 @@
+
+
+/*** 
+
+====================================================================
+	Architecture Section
+====================================================================
+
+***/
+
+.architecture {
+    &-section {
+        position: relative;
+        padding: 100px 0px 60px;
+    
+        .sec-title, .sec-title-two {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-block {
+        position: relative;
+        padding: 0 40px;
+    
+        @include margin((t, 20px), (b, 20px));
+    
+        .text {
+    
+            @include font(14, 14*1.6, 400, $ffText);
+            text-align: center;
+        }
+    
+        .inner-box {
+            position: relative;
+    
+            .lower-box {
+                position: relative;
+                padding-top: 24px;
+    
+                h3 {
+                    margin: 10px 0;
+                    position: relative;
+    
+                    @include font(18, 18*1.4, 700, $ffHeading);
+         
+                    text-align: center;
+                    text-transform: uppercase;
+    
+                    color: $grey21;
+    
+                    a {
+                        position: relative;
+                       
+                        color: $grey7;
+                       
+                        transition: all 0.3s ease;
+                        
+                        &:hover {
+                            color: $grey;
+                        }
+                        
+                    }
+                    
+                }
+            }
+    
+            &:hover .image img {
+                opacity: 0.5;
+                transform: scale(1.05, 1.05);
+            }
+    
+            img {
+                position: relative;
+                display: block;
+                transition: all 0.5s ease;
+                
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+               
+            }
+        }
+    
+        .image {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            background: $black;
+        }
+        
+    }
+}
+

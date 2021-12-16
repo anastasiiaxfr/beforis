@@ -1,0 +1,371 @@
+/*Btn Style One*/
+
+.btn-style {
+    &-one {
+        position: relative;
+        display: inline-block;
+        padding: 10px 26px;
+
+        background: $grey4;
+        color: $yellow;
+        border: 2px solid $grey4;
+
+        @include font(14, 24, 700);
+        text-transform: uppercase;
+
+        &:hover {
+            background: none;
+            color: $grey4;
+        }
+    }
+
+    &-two {
+        position: relative;
+        display: inline-block;
+        padding: 11px 43px;
+
+        border-radius: 50px;
+        border: 2px solid $grey;
+        background: $grey;
+        color: $white;
+
+        transition: $trs2;
+
+        @include font(17, 24, 600);
+
+        &:hover {
+            border-color: $white;
+            background: none;
+        }
+
+        .main-slider & {
+            margin-top: 16px;
+        }
+    }
+
+    &-three {
+        position: relative;
+        display: inline-block;
+        padding: 10px 26px;
+
+        background: $grey;
+        border: 2px solid $grey;
+        color: $white;
+
+        @include font(14, 24, 700, $ffHeading);
+        text-transform: uppercase;
+
+        transition: $trs2;
+
+        &:hover {
+            color: $grey;
+            background: none;
+        }
+
+    }
+
+    &-four {
+        position: relative;
+        display: inline-block;
+
+        padding: 12px 28px;
+
+        background: $grey;
+        border-radius: 50px;
+        border: 2px solid $grey;
+        color: $white;
+
+        @include font(16, 24, 600, $ffHeading);
+
+        &:hover {
+            background: none;
+            color: $grey;
+        }
+
+    }
+
+
+
+    &-six {
+        position: relative;
+        display: inline-block;
+        padding: 7px 30px;
+
+        border-radius: 50px;
+        border: 2px solid $grey;
+        background: none;
+        color: $grey;
+
+        @include font(16, 24, 600, $ffHeading);
+
+        transition: $trs2;
+
+        &:hover {
+            background: $grey;
+            color: $white;
+        }
+    }
+
+
+    &-seven {
+        position: relative;
+        display: inline-block;
+        padding: 16px 44px;
+
+        background: $grey;
+        border: 2px solid $grey;
+        color: $white;
+
+        @include font(25, 24, 700, $ffHeading);
+
+        &:hover {
+            background: $grey;
+            color: $white;
+        }
+
+    }
+
+    &-eight {
+        position: relative;
+        display: inline-block;
+        padding: 9px 28px;
+
+        @include font(16, 24, 600, $ffHeading);
+
+        background: $grey;
+        border: 2px solid $grey;
+        color: $white;
+
+        &:hover {
+            background: $grey;
+            color: $white;
+        }
+
+    }
+
+}
+
+
+.btn {
+    &-main {
+        position: relative;
+        display: inline-block;
+        padding: 11px 43px;
+
+        min-width: 250px;
+
+        @include font(16, 24, 600, $ffHeading);
+        text-align: center;
+
+        background: $grey4;
+        border: 1px solid $grey4;
+        color: $white;
+
+        transition: $trs2;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: none;
+            color: $grey4;
+        }
+
+        &--white {
+
+            @extend .btn-main;
+            background: $white;
+            color: $grey4;
+
+            &:hover {
+                color: $white;
+                border-color: $white;
+            }
+
+        }
+        @include maw(528){
+            @include font(14, 14*1.2, 600, $ffHeading);
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+	Social Icon One
+====================================================================
+
+***/
+
+.social-icon {
+
+    &-one {
+        position: relative;
+
+        li {
+            position: relative;
+            margin-top: 2px;
+
+            a {
+                position: relative;
+                display: inline-block;
+
+                @include font(14, 14);
+
+                color: $grey3;
+
+                transition: $trs;
+
+                &:hover {
+                    color: $grey;
+                }
+
+            }
+        }
+    }
+
+    &-two {
+        position: relative;
+
+        li {
+            position: relative;
+            display: inline-block;
+            margin-right: 8px;
+
+            a {
+                position: relative;
+                display: inline-block;
+
+                @include sz(40px, 40px);
+
+                @include font(18, 40);
+                text-align: center;
+
+                border-radius: 50%;
+                border: 1px solid $grey;
+                color: $grey;
+
+                transition: $trs;
+
+                &:hover {
+                    background-color: $grey;
+                    color: $white;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+/*** 
+  
+  ====================================================================
+      Scroll To Top style
+  ====================================================================
+  
+  ***/
+
+.scroll-top {
+    @include position(fixed, (b, 15px), (r, 15px));
+    @include sz(60px, 60px);
+
+    background: $grey2;
+    color: $white;
+
+    @include font(24, 60);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 100;
+
+    cursor: pointer;
+
+    transition: $trs;
+
+    &:hover {
+        background: $grey;
+        color: $white;
+    }
+}
+
+/* LANG */
+.lang-switcher {
+    @include flex(flex, center, center, nowrap);
+    @include padding((l, 20px), (r, 40px));
+    li {
+        width: auto;
+        padding: 0px;
+
+    }
+
+    button {
+      
+        background-color: transparent;
+
+        i {
+            display: block;
+            margin-left: 10px;
+        }
+
+    }
+
+    .dropdown-menu {
+        min-width: auto;
+        max-width: 100px;
+
+        button {
+            margin: 0 auto;
+            padding: 5px 25px;
+        }
+    }
+
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+.btn-arrow {
+    position: relative;
+    background: transparent;
+    font-weight: 600;
+
+    & .icon-right {
+        @include position(absolute, (r, -21px), (t, 6px));
+        @include sz(15px, 15px);
+
+        background-image: url(../../images/icons/next.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        color: $grey;
+    }
+
+
+}
+
+
+.btn-ct {
+    margin-top: 40px;
+    text-align: center;
+
+    &.btn-ct--left {
+        text-align: left;
+    }
+}
+
+
+
+.tg-ct {
+    @include position(fixed, (b, 100px), (l, 0));
+    display: block;
+    @include sz(100px, 100px);
+    z-index: 1;
+}

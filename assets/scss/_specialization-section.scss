@@ -1,0 +1,137 @@
+
+
+/*** 
+
+====================================================================
+	Specialization Section
+====================================================================
+
+***/
+
+.specialization-section {
+    position: relative;
+    padding: 92px 0;
+
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-color: $grey21;
+
+    .specialization-block {
+        position: relative;
+        display: inline-block;
+        
+        padding: 10px;
+        margin-left: 2%;
+        margin-right: 2%;
+   
+        &.style-two .inner h3 a {
+            color: $grey4;
+        }
+    
+        &:last-child .inner {
+            border: none;
+        }
+    
+        .inner {
+            position: relative;
+
+            &-title {
+                margin-bottom: 0;
+                
+                text-transform: uppercase;
+                text-align: center;
+                
+                color: $grey;
+                @include font(14, 14, 600, $ffHeading);
+            }
+
+            &-most {
+                position: relative;
+                display: inline-block;
+                
+                img {
+                    display: block;
+                    object-fit: contain;
+
+                    @include sz(70px, 70px);
+                    margin: 0 auto 20px;
+                }
+            }    
+    
+            h3 {
+                position: relative;
+    
+                @include font(15, 15, 600);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: left;
+    
+                a {
+                    position: relative;
+                    
+                    color: $white;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            .icon-box {
+                position: relative;
+                margin-bottom: 15px;
+    
+                color: $grey12;
+               
+                @include font(60, 60, 400);
+            }
+        }
+
+        img {
+            height: 105px;
+        }
+    }
+
+    &--merchant .specialization-block {
+        width: 10%;
+    }
+
+    .inner-content, .sec-title-two {
+        position: relative;
+        text-align: center;
+    }
+
+    .inner-content {
+        .big-text {
+            position: relative;
+            margin-bottom: 10px;
+            @include font(22, 22, 300);
+
+            color: $white;
+
+        }
+
+        .text {
+            position: relative;
+            margin-bottom: 40px;
+            max-width: 1050px;
+
+            font-size: 16px;
+            color: $white;
+        }
+        
+    }
+
+}
+
+
+.services-outer {
+    position: relative;
+
+    @include flex(flex, center, center, wrap);
+
+    .specialization-block .inner h3 {
+        color: $grey12;
+    }
+}
+

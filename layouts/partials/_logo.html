@@ -1,0 +1,10 @@
+<!--Logo Box-->
+{{ $img := .Scratch.Get "img" }}
+{{ $logo_w := .Scratch.Get "logo_w" }}
+
+
+<div class="logo">
+   <a href="{{ .Site.BaseURL | relLangURL }}">
+      <img src="{{ $img | relURL }}" width="{{ $logo_w }}" alt="{{ .Title }}">
+   </a>
+</div>

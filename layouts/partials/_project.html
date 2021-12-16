@@ -1,0 +1,49 @@
+<section class='project-section {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }} {{ if .padding_bottom }} pb-lg {{ end }}'>
+    <div class="auto-container">
+
+        {{ if .title }}
+        <div class="text-center mb-md">
+            <h2> 
+                {{ .title | markdownify | truncate 100 }}
+            </h2>
+            {{ if .title_sub }}
+            <h5>
+                {{ .title_sub | truncate 200 }}
+            </h5>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        <div class="row clearfix">
+
+            {{ range .items }}
+            <!--Architecture Block-->
+            <div class="architecture-block col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="">
+                        <img src="{{ .icon | relURL }}" alt="{{ .title | truncate 100 }}">
+                    </div>
+                    <div class="lower-box">
+                        <h3>{{ .title | markdownify | truncate 100 }}</h3>
+                        <div class="text">
+                            {{ .description | truncate 200 | markdownify }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+
+        {{ if .btn }}
+        <div class="text-center mt-md">
+            <a href="{{ .btn.url }}" class="btn-main">
+              
+                {{ .btn.label }}
+           
+            </a>
+        </div>
+        {{ end }}
+
+    </div>
+</section>

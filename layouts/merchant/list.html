@@ -1,0 +1,133 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+{{- partial "header.html" . -}}
+
+<div class="page--merchant">
+<!-- BEGIN hero -->
+
+<!-- 
+{{ if $data.merchant.hero }}
+	{{ with $data.merchant.hero }}
+
+    {{ partial "_hero-single.html" . }}
+    
+	{{ end }}
+{{ end }}
+ -->
+{{ if .Params.hero.enable }}
+{{ with .Params.hero }}
+    {{ partial "_hero-single.html" . }}
+{{ end }}
+{{ end }}
+<!-- END hero -->
+
+
+<!-- BEGIN section -->
+<!-- 
+{{ if $data.merchant.project }}
+	{{ with $data.merchant.project }}
+
+<style>
+    @media only screen and (min-width: 760px){
+        .project-section--cert .architecture-block {
+            margin-bottom: 0;
+        }
+    }
+</style>
+
+{{ partial "_project.html" . }}
+
+    {{ end }}
+{{ end }}
+  -->
+  {{ if .Params.project.enable }}
+  {{ with .Params.project }}
+
+
+  {{ partial "_project.html" . }}
+
+  {{ end }}
+{{ end }} 
+
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- 
+{{ if $data.merchant.fee }}
+	{{ with $data.merchant.fee }}
+    {{ .Scratch.Set "pdt" "0" }}
+    {{ partial "_fee.html" . }}
+    {{ end }}
+{{ end }}
+-->
+{{ if .Params.fee.enable }}
+	{{ with .Params.fee }}
+        {{ partial "_fee.html" . }}
+    {{ end }}
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- 
+{{ if $data.merchant.domains }}
+	{{ with $data.merchant.domains }}
+    {{ .Scratch.Set "pdt" "0" }}
+    {{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }}
+  -->
+{{ if .Params.domains.enable }}
+  {{ with .Params.domains }}
+    {{ partial "_domains-single.html" . }}
+   
+  {{ end }}
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- 
+    {{ if $data.merchant.rates }}
+	{{ with $data.merchant.rates }}
+        {{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_pricing.html" . }}
+    {{ end }}
+{{ end }}
+  -->
+{{ if .Params.rates.enable }}
+	{{ with .Params.rates }}
+ 
+		{{ partial "_pricing.html" . }}
+  
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- 
+    {{ if $data.merchant.str }}
+{{ with $data.merchant.str }}
+
+	{{ .Scratch.Set "pdt" "0" }}
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }}
+ -->
+{{ if .Params.str.enable }}
+{{ with .Params.str }}
+
+
+	{{ partial "_str.html" . }}
+
+
+{{ end }}
+{{ end }}
+<!-- END section -->
+
+{{- partial "_contacts.html" . -}}
+</div>
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}}
+{{ end }}

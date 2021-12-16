@@ -1,0 +1,101 @@
+# hero #
+hero:
+  enable: true
+  hero_title_sup: "5+ ЛЕТ ДОВЕРИЯ И УСПЕШНОЙ РАБОТЫ В НИШЕ"
+  hero_title: "Комплексное решение для \n\n вашего бизнеса за рубежом"
+  hero_title_sub: "150+ зарегистрированых компаний в Европе, Азии \n\n и офшорных зонах"
+  hero_bg: "/images/bg/home-main.jpg"
+  hero_btn_label: "Получить консультацию"
+  hero_btn_url: "#contact"
+
+# section 1 #
+section_1: 
+  enable: true
+  padding_top: false
+  padding_bottom: false
+  padding_top_bottom: true
+  padding_default: false
+  padding_none: false 
+  title: "Какие задачи решаем"
+  title_sub: "Если вы хотите вывести свой бизнес на международный уровень, эксперты компании Beforis пройдут с вами все необходимые шаги от идеи до получения прибыли."
+  icons:
+  - icon: "/images/icons/client.svg"
+    title: "100+" 
+    title_sub: "ДОВОЛЬНЫХ КЛИЕНТОВ"
+  - icon: "/images/icons/files.svg"
+    title: "200+" 
+    title_sub: "ОТКРЫТЫХ СЧЕТОВ"
+  list: 
+    - item: "Анализ и выход на новые рынки"
+    - item: "Эквайринг в иностранных банках" 
+    - item: "Минимизация валютных рисков" 
+    - item: "Снижение налоговой нагрузки" 
+    - item: "Защита активов" 
+    - item: "Реализация проектов не урегулированных местным законодательством" 
+
+# section 2 #
+section_2: 
+  enable: true
+  padding_top: false
+  padding_bottom: false
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: true
+  title: "Наша команда специализируется на корпоративном структурировании любой сложности"
+  title_sub: "Независимо от текущего состояния вашей юридической или финансовой структуры, ваш проект будет доведен до совершенства."
+  lists: 
+    - item: "Юридический и финансовый консалтинг"
+    - item: "Анализ и подготовка первичной документации"
+    - item: "Регистрация компаний за рубежом"
+    - item: "Получения финансовых и других лицензий"
+    - item: "Сопровождение банковских проводок"
+    - item: "Структурирование операционной деятельности"
+    - item: "Налоговое планирование"
+    - item: "Открытие расчетных счетов в зарубежных банках"
+    - item: "Открытие счетов в небанковских финансовых компаниях"
+    
+# section 4 #
+section_4: 
+  enable: true
+  padding_top: true
+  padding_bottom: false
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: false 
+  title: "Outsourced Managment"
+  subtitle: "Our services can be provided to enterprises directly or via our network of partners."
+  num: "03"
+  items:
+    - icon: "/images/icons/i6.png"
+      title: "RISK MANAGEMENT"
+      description: "We have accumulated vast experiance in risk management and mitigation across a	number of industry sectors. We can offer our expert insight across your	business. We offer risk assessment and mitigation services for a number of	industries..."
+    - icon: "/images/icons/i7.png"
+      title: "CUSTOMER SUPPORT IN DIFFERENT LANGUAGES"
+      description: "We strive to exceed customers expectation when it comes to customer service. we	assess players’ particular solution holistically and offer a solution that	builds trust through quick response and transparency."
+  button: 
+    enable: true
+    url: "#form"
+    label: "Run with Us"
+
+
+# section 5 #
+section_5: 
+  enable: true
+  padding_top: false
+  padding_bottom: true
+  padding_top_bottom: false
+  padding_default: false
+  padding_none: false 
+  title: "Advertising"
+  num: "04"
+  items:
+    - icon: "/images/icons/i1.png"
+      title: "PUBLISHERS"
+      description: "We provide the best terms and conditions for our clients. With a specific focus on a wide range of both new and unique products...."
+    - icon: "/images/icons/i2.png"
+      title: "ADVERTISERS"
+      description: "We provide high level programs that fit within your niche with commission levels that offer the most attractive opportunities and earnings per click..."
+  button: 
+    enable: true
+    url: "#form"
+    label: "Run with Us"

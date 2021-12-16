@@ -1,0 +1,34 @@
+
+/*** 
+
+====================================================================
+	Map Section Style
+====================================================================
+
+***/
+
+.map {
+    &-section {
+        position: relative;
+    }
+
+    &-data {
+        text-align: center;
+
+        @include font(14, 14*1.8, 400);
+
+        h6 {
+            @include font(16, 16, 700);
+            margin-bottom: 5px;
+            text-align: center;
+            color: $grey67;
+        }
+    }
+
+    &-canvas {
+        height: 540px;
+    }
+    
+    
+}
+

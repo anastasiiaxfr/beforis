@@ -1,0 +1,349 @@
+baseURL = "https://beforis.com/"
+canonifyURLs = true
+relativeURLs = true
+defaultContentLanguage = "en"
+disableLanguages = []
+languageCode = "en-us"
+paginate = "6"
+
+summaryLength = "50"
+title = "Beforis"
+[Languages.en]
+contentDir = "content/en"
+dateFormat = "January 2, 2006"
+home = "Home"
+languageCode = "en-us"
+languageName = "En"
+weight = 2
+[[Languages.en.footer.col]]
+links = [["hi@beforis.com", "mailto:hi@beforis.com"]]
+title = "Contacts"
+[[Languages.en.footer.col]]
+links = [["Main", "/"], ["Services", "/#services"]]
+title = "Information"
+[[Languages.en.footer.col]]
+links = [["&copy; 2021 Beforis. All rights reserved.", ""], ["Privacy Policy", "/privacy/"]]
+title = "Copyright"
+[Languages.en.params.form]
+action = "/php/sendemail-en.php"
+enable = "true"
+method = "POST"
+title = "Get a free consultation"
+title_sub = "Fill in the application form, and the Beforis manager will contact you to discuss the details."
+[[Languages.en.params.form.field]]
+name = "name"
+placeholder = "Name"
+required = "true"
+type = "text"
+[[Languages.en.params.form.field]]
+name = "tel"
+placeholder = "Phone"
+required = "true"
+type = "tel"
+[[Languages.en.params.form.field]]
+name = "email"
+placeholder = "Email"
+required = "true"
+type = "email"
+[[Languages.en.params.form.field]]
+name = "btn_submit"
+placeholder = "Send"
+required = "true"
+type = "submit"
+[Languages.en.params.partners]
+enable = "true"
+title = "Our partners"
+[[Languages.en.params.contacts]]
+description = "Beforis Limited \n\n\nRegistration Number: 2972879 \n\n\nCompany Address: Rm 7B, One Capital Place, \n\n\n18 Luard Road, Wan Chai, Hong Kong\n"
+icon = "icon-loc"
+title = "ADDRESS"
+[[Languages.en.params.contacts]]
+email = "hi@beforis.com"
+icon = "icon-mail"
+title = "EMAIL"
+[Languages.ru]
+contentDir = "content/ru"
+home = "Главная"
+languageCode = "ru"
+languageName = "Ru"
+weight = 1
+[[Languages.ru.footer.col]]
+links = [["hi@beforis.com", "mailto:hi@beforis.com"]]
+title = "Контакты"
+[[Languages.ru.footer.col]]
+links = [["Главная", "/"], ["Услуги", "/#services"]]
+title = "Информация"
+[[Languages.ru.footer.col]]
+links = [["&copy; 2021 Beforis. Все права защищены.", ""], ["Политика конфиденциальности", "/privacy/"]]
+title = "Политика"
+[Languages.ru.params.form]
+action = "/php/sendemail.php"
+enable = "true"
+method = "POST"
+title = "Получите бесплатную консультацию"
+title_sub = "Отправьте заявку, и менеджер Beforis свяжется с вами, чтобы согласовать детали."
+[[Languages.ru.params.form.field]]
+name = "name"
+placeholder = "Имя"
+required = "true"
+type = "text"
+[[Languages.ru.params.form.field]]
+name = "tel"
+placeholder = "Телефон"
+required = "true"
+type = "tel"
+[[Languages.ru.params.form.field]]
+name = "email"
+placeholder = "Email"
+required = "true"
+type = "email"
+[[Languages.ru.params.form.field]]
+name = "btn_submit"
+placeholder = "отправить"
+required = "true"
+type = "submit"
+[Languages.ru.params.partners]
+enable = "true"
+title = "Наши партнеры"
+[[Languages.ru.params.contacts]]
+description = "Beforis Limited \n\n\nRegistration Number: 2972879 \n\n\nCompany Address: Rm 7B, One Capital Place, \n\n\n18 Luard Road, Wan Chai, Hong Kong\n"
+icon = "icon-loc"
+title = "АДРЕС"
+[[Languages.ru.params.contacts]]
+email = "hi@beforis.com"
+icon = "icon-mail"
+title = "EMAIL"
+[[menu.main]]
+name = "Все страны"
+parent = " Регистрация компаний"
+url = "/ru/registration/#geo"
+weight = 7
+[[menu.main]]
+name = "Австрия"
+parent = " Регистрация компаний"
+url = "/ru/registration/at/"
+weight = 6
+[[menu.main]]
+name = "Антигуа и Барбуда"
+parent = " Регистрация компаний"
+url = "/ru/registration/ag/"
+weight = 5
+[[menu.main]]
+name = "Польша"
+parent = " Регистрация компаний"
+url = "/ru/registration/pl/"
+weight = 4
+[[menu.main]]
+name = " Сертификация PCI DSS"
+parent = "Дополнительные услуги"
+url = "/certification/"
+weight = 4
+[[menu.main]]
+name = " Сопровождение финансовых транзакций"
+parent = "Дополнительные услуги"
+url = "/maintenance/"
+weight = 3
+[[menu.main]]
+name = " Открытие мерчант-счета"
+parent = "Дополнительные услуги"
+url = "/merchant/"
+weight = 2
+[[menu.main]]
+name = "Международное налоговое планирование и структурирование"
+parent = "Дополнительные услуги"
+url = "/taxation/"
+weight = 1
+[[menu.main]]
+name = " Получение лицензии"
+parent = "Услуги"
+url = "/license/"
+weight = 3
+[[menu.main]]
+name = "Кипр"
+parent = " Регистрация компаний"
+url = "/ru/registration/cy/"
+weight = 3
+[[menu.main]]
+name = "Гонконг"
+parent = " Регистрация компаний"
+url = "/ru/registration/hk/"
+weight = 2
+[[menu.main]]
+name = "Великобритания"
+parent = " Регистрация компаний"
+url = "/ru/registration/gb/"
+weight = 1
+[[menu.main]]
+name = "Дополнительные услуги"
+parent = "Услуги"
+weight = 4
+[[menu.main]]
+name = "Открытие бизнес-счета"
+parent = "Услуги"
+url = "/account/"
+weight = 2
+[[menu.main]]
+name = "Основные услуги"
+parent = "Услуги"
+weight = 1
+[[menu.main]]
+name = " Регистрация компаний"
+parent = "Основные услуги"
+url = "/registration/"
+weight = 1
+[[menu.main]]
+name = "Главная"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Контакты"
+url = "/#contact"
+weight = 3
+[[menu.main]]
+name = "Услуги"
+weight = 2
+[[menu.nav]]
+name = "PCI DSS Certification"
+parent = " Addition Services "
+url = "/certification/"
+weight = 4
+[[menu.nav]]
+name = "Financial transactions support"
+parent = " Addition Services "
+url = "/maintenance/"
+weight = 3
+[[menu.nav]]
+name = "Opening a merchant account"
+parent = " Addition Services "
+url = "/merchant/"
+weight = 2
+[[menu.nav]]
+name = " International tax planning and structuring "
+parent = " Addition Services "
+url = "/taxation/"
+weight = 1
+[[menu.nav]]
+name = "Obtaining license"
+parent = " Main services "
+url = "/license/"
+weight = 3
+[[menu.nav]]
+name = "Opening of a business account abroad"
+parent = " Main services "
+url = "/account/"
+weight = 2
+[[menu.nav]]
+name = "Registration of companies abroad"
+parent = " Main services "
+url = "/registration/"
+weight = 1
+[[menu.nav]]
+name = " Addition Services "
+parent = "SERVICES"
+weight = 2
+[[menu.nav]]
+name = " Main services "
+parent = "SERVICES"
+weight = 1
+[[menu.nav]]
+name = "SERVICES"
+weight = 2
+[[menu.nav]]
+name = "CONTACTS"
+url = "/#contact"
+weight = 3
+[[menu.nav]]
+name = "MAIN"
+url = "/"
+weight = 1
+[outputs]
+home = ["HTML", "AMP", "RSS", "JSON"]
+[params]
+GTM = "GTM-WHBQ3BV"
+description = "Beforis - мы помогаем расширить ваш бизнес по всему миру, включая вашу компанию, банковское дело и многое другое. Свяжитесь с нами для получения универсального набора инструментов, чтобы начать свой интернет-бизнес без хлопот."
+develop = "xfr"
+email = "hi@beforis.com"
+form = ""
+form_access_token = "y1dtj7i8jlc7ypm8pho5rn4v"
+form_action = "https://postmail.invotes.com/send"
+logo = "/images/beforis-black.png"
+logo_w = "120"
+logo_white = "/images/beforis-footer.png"
+site_url = "beforis.com"
+telegram = "https://t.me/Beforis"
+[[params.partner.item]]
+icon = "/images/partners/logo-1.svg"
+title = ""
+[[params.partner.item]]
+icon = "/images/partners/logo-2.svg"
+title = ""
+[[params.partner.item]]
+icon = "/images/partners/logo-3.svg"
+title = ""
+[[params.partner.item]]
+icon = "/images/partners/logo-4.svg"
+title = ""
+[[params.partner.item]]
+icon = "/images/partners/logo-5.svg"
+title = ""
+[[params.partner.item]]
+bg = true
+icon = "/images/partners/logo-6.svg"
+title = ""
+[[params.plugins.css]]
+link = "plugins/css/bootstrap.css"
+[[params.plugins.css]]
+link = "plugins/css/hover.css"
+[[params.plugins.css]]
+link = "plugins/css/owl.css"
+[[params.plugins.css]]
+link = "plugins/css/jquery-ui.css"
+[[params.plugins.css]]
+link = "plugins/css/jquery.bootstrap-touchspin.css"
+[[params.plugins.css]]
+link = "plugins/css/jquery.fancybox.min.css"
+[[params.plugins.css]]
+link = "plugins/css/jquery.mCustomScrollbar.min.css"
+[[params.plugins.css]]
+link = "plugins/css/animate.min.css"
+[[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+[[params.plugins.css]]
+link = "plugins/css/flaticon.css"
+[[params.plugins.css]]
+link = "plugins/css/animate.css"
+[[params.plugins.css]]
+link = "plugins/css/revolution/css/settings.css"
+[[params.plugins.css]]
+link = "plugins/css/revolution/css/layers.css"
+[[params.plugins.css]]
+link = "plugins/css/revolution/css/navigation.css"
+[[params.plugins.css]]
+link = "plugins/css/color-themes/default-theme.css"
+[[params.plugins.js]]
+link = "plugins/js/jquery.js"
+# [[params.plugins.js]]
+# link = "plugins/js/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/js/wow.js"
+[[params.plugins.js]]
+link = "plugins/js/appear.js"
+[[params.plugins.js]]
+link = "plugins/js/just-validate.min.js"
+[[params.plugins.js]]
+link = "plugins/js/inputmask.min.js"
+[[params.plugins.js]]
+link = "js/script.js"
+[[params.plugins.js]]
+link = "js/_form-tm.js"
+[params.preloader]
+enable = true
+[sitemap]
+ChangeFreq = "daily"
+Priority = 0.6
+Weight = [["main", "1"], ["sub2", "0.8"], ["sub3", "0.6"]]
+enableRobotsTXT = true
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"

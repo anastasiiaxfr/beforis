@@ -1,0 +1,28 @@
+<section class='specialization-section'>
+    <div class="auto-container" style="max-width: 100%; width: 100%;">
+        
+            <h2 class="text--main">
+                {{ .title | truncate 100 }}
+            </h2>
+      
+        <div class="inner-content">
+            <div class="services-outer">
+                <!--Specialization Block-->
+                {{ range .items }}
+                <div class="specialization-block">
+                    <div class="inner">
+                        <div class="inner-most">
+                            <img src="{{ .icon | relURL }}" alt="{{ .title | truncate 100 }}">
+                            {{ if .label }}
+                            <p class="inner-title">
+                                {{ .label }}
+                            </p>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

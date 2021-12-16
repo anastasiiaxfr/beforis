@@ -1,0 +1,92 @@
+
+/*** 
+
+====================================================================
+	We Do Section
+====================================================================
+
+***/
+
+.we-do-section {
+    position: relative;
+    padding: 95px 0px 70px;
+
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+
+    .title-column {
+        position: relative;
+        margin-bottom: 35px;
+
+        .inner-column {
+            position: relative;
+            padding-right: 70px;
+
+            border-right: 1px solid $grey41;
+        }
+
+        .bold-text {
+            position: relative;
+            margin-bottom: 8px;
+
+            @include font(22, 22*1, 700);
+
+            color: $grey4;
+        }
+
+        .text {
+            position: relative;
+            margin-bottom: 22px;
+            color: $grey15;
+
+            @include font(16, 16*1.8, 400);
+        }
+        
+    }
+
+    .content-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+            @include position((l, 40px), (r, 120px));
+
+            .request-call {
+                position: relative;
+
+                @include font(15, 15, 700);
+               
+                color: $grey;
+                text-transform: uppercase;
+                
+                border-bottom: 1px solid $grey;
+            }
+
+            
+            h2 {
+                position: relative;
+                margin-bottom: 18px;
+
+                @include font(22, 22*1.4, 500);
+             
+                color: $grey4;
+                
+                
+            }
+
+
+            .text {
+                position: relative;
+                margin-bottom: 28px;
+                color: $grey15;
+
+                @include font(16, 16*1.8, 400);
+            }
+            
+            
+        }
+        
+    }
+}
+

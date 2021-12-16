@@ -1,0 +1,77 @@
+
+/*** 
+
+====================================================================
+	Contact Section
+====================================================================
+
+***/
+
+.contact-section {
+    position: relative;
+
+    padding: 90px 0px 0px;
+    margin-bottom: 60px;
+
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    .form-column {
+        position: relative;
+        margin-bottom: 0px;
+
+        .inner-column {
+            position: relative;
+            padding-right: 40px;
+
+            .text {
+                position: relative;
+                margin-bottom: 45px;
+                
+                color: $grey15;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .info-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+            padding-left: 70px;
+        }
+
+        ul {
+            position: relative;
+
+            li {
+                position: relative;
+                margin-bottom: 40px;
+                
+                color: $grey;
+
+                @include font(20, 20, 600);
+             
+
+                span {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 18px;
+                   
+                    color: $grey;
+                    @include font(15, 15, 600);
+                    text-transform: uppercase;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+
+
+
+
+

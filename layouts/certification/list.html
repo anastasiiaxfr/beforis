@@ -1,0 +1,116 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+{{- partial "header.html" . -}}
+
+
+<!-- BEGIN hero -->
+<!-- {{ if $data.certification.hero.enable }}
+	{{ with $data.certification.hero }}
+		{{ partial "_hero-single.html" . }}
+	{{ end }}
+{{ end }} -->
+
+{{ if .Params.hero.enable }}
+	{{ with .Params.hero }}
+		{{ partial "_hero-single.html" . }}
+	{{ end }}
+{{ end }}
+
+<!-- END hero -->
+
+
+<!-- BEGIN section -->
+<!-- {{ if $data.certification.project.enable }}
+	{{ with $data.certification.project }}
+	<div class="py-lg">
+		{{ partial "_project.html" . }}
+	</div>
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.project.enable }}
+	{{ with .Params.project }}
+	
+		{{ partial "_project.html" . }}
+
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.certification.rates.enable }}
+	{{ with $data.certification.rates }}
+
+	<div class="pb-lg">
+		{{ partial "_pricing.html" . }}
+	</div>
+		
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.rates.enable }}
+	{{ with .Params.rates }}
+
+		{{ partial "_pricing.html" . }}
+		
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.certification.domains.enable }}
+	{{ with $data.certification.domains }}
+		{{ partial "_domains-single.html" . }}
+		{{ end }}
+{{ end }}  -->
+{{ if .Params.domains.enable }}
+	{{ with .Params.domains }}
+		{{ partial "_domains-single.html" . }}
+		{{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- {{ if $data.certification.fee.enable }}
+	{{ with $data.certification.fee }}
+		{{ partial "_fee.html" . }}
+	{{ end }}
+{{ end }} -->
+{{ if .Params.fee.enable }}
+	{{ with .Params.fee }}
+		{{ partial "_fee.html" . }}
+	{{ end }}
+{{ end }}
+<!-- 
+{{ if $data.certification.geo.enable }}
+	{{ with $data.certification.geo }}
+	{{ $url := .Scratch.Set $.URL }}
+	{{ partial "_geo.html" . }}
+	{{ end }}
+{{ end }} -->
+
+{{ if .Params.geo.enable }}
+	{{ with .Params.geo }}
+	{{ $url := .Scratch.Set $.URL }}
+	{{ partial "_geo.html" . }}
+	{{ end }}
+{{ end }}
+
+<!-- BEGIN section -->
+<!-- {{ if $data.certification.str.enable }}
+{{ with $data.certification.str }}
+	<div class="py-lg">
+		{{ partial "_str.html" . }}
+	</div>
+{{ end }}
+{{ end }} -->
+{{ if .Params.str.enable }}
+{{ with .Params.str }}
+		{{ partial "_str.html" . }}
+{{ end }}
+{{ end }}
+<!-- END section -->
+
+{{- partial "_contacts.html" . -}}
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}}
+{{ end }}

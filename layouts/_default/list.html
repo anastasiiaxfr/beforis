@@ -1,0 +1,391 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{- partial "header.html" . -}}
+
+<article class="page-main"> 
+{{ .Scratch.Set "yml" .Params.yml }}
+{{- partial "_hero.html" . -}}
+
+
+
+<!-- BEGIN section_1 -->
+{{ if .Params.section_1 }}
+<section class="project-section project-section--cert section-{{ .Params.section_1.pos }}">
+	<div class="auto-container">
+
+		{{ if .Params.section_1.title }}
+		<div class="sec-title">
+			<h3> 
+				{{ .Params.section_1.title | truncate 100 }}
+			</h3>
+			{{ if .Params.section_1.title_sub }}
+			<h2 class="heading_sub">
+				{{ .Params.section_1.title_sub | truncate 200 }}
+			</h2>
+			{{ end }}
+		</div>
+		{{ end }}
+
+		<div class="row clearfix">
+
+			{{ range .Params.section_1.items }}
+			<!--Architecture Block-->
+			<div class="architecture-block col-md-4 col-sm-6 col-xs-12">
+				<div class="inner-box">
+					<div class="">
+						<img src="{{ .icon | relURL }}" alt="{{ .title | truncate 100 }}">
+					</div>
+					<div class="lower-box">
+						<h3>{{ .title | truncate 100 }}</h3>
+						<div class="text">
+							{{ .description | truncate 200 | markdownify }}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ end }}
+
+		</div>
+
+		{{ if .Params.section_1.btn }}
+		<div class="btn-ct">
+			<a href="{{ .Params.section_1.btn.url }}" class="btn-style-five">
+				<span>
+				{{ .Params.section_1.btn.label }}
+			</span>
+			</a>
+		</div>
+		{{ end }}
+
+	</div>
+</section>
+{{ end }}
+<!-- END section_1 -->
+
+<!-- BEGIN section_2 -->
+{{ if .Params.section_2 }}
+<section class="table-section table-section--reg section-{{ .Params.section_2.pos }}" id="packages">
+	<div class="auto-container">
+		<div class="sec-title">
+			<h3>
+				{{ .Params.section_2.title | truncate 100 }}
+			</h3>
+			
+		</div>
+
+		<div class="inner-content">
+			<div class="row clearfix">
+
+				{{ range .Params.section_2.cols }}
+
+				<div {{ if .type }} class="col-md-5 col-sm-6 col-md-offset-1" {{ else }} class="col-md-6 col-sm-6" {{ end }}>
+					{{ if .type }}
+					<div class="list-bg">
+						{{ end }}
+						
+						<h6>
+							{{ .title | truncate 100 }}
+
+						</h6>
+
+						<ul {{ if .type }} class="checks checks--hollow" {{ else }} class="checks" {{ end }}>
+							{{ range .items }}
+							<li>
+								{{ .item }}
+							</li>
+							{{ end }}
+						</ul>
+						{{ if .type }}
+					</div>
+					{{ end }}
+				</div>
+				{{ end }}
+
+			</div>
+		</div>
+
+		{{ if .Params.section_2.btn }}
+		<div class="btn-ct">
+			<a href="{{ .Params.section_2.btn.link }}" class="btn-style-five"><span>
+					{{ .Params.section_2.btn.label }}
+				</span></a>
+		</div>
+		{{ end }}
+
+	</div>
+</section>
+{{ end }}
+<!-- END section_2 -->
+
+<!-- BEGIN section_3 -->
+{{ if not .Params.section_3.btm }}
+{{ if .Params.section_3 }}
+<section class="specialization-section section-{{ .Params.section_3.pos }}">
+	<div class="auto-container">
+		<div class="sec-title-two light">
+			<h2>
+				{{ .Params.section_3.title | truncate 100 }}
+			</h2>
+		</div>
+		<div class="inner-content">
+			<div class="services-outer">
+				<!--Specialization Block-->
+				{{ range .Params.section_3.items }}
+				<div class="specialization-block">
+					<div class="inner">
+						<div class="inner-most">
+							<img src="{{ .icon | relURL }}" alt="{{ .section_3.title | truncate 100 }}">
+						</div>
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+<!-- END section_3 -->
+
+<!-- BEGIN section_4 -->
+{{ if .Params.section_4 }}
+<section class="fee-section fee-section--reg fee-section--merchant section-{{ .Params.section_4.pos }}">
+	<div class="row">
+
+		<!--Image Column-->
+		<div class="col-img col-md-6 col-sm-12 col-xs-12">
+			<div class="image img-fee">
+				<img class="img-default" src="{{ .Params.section_4.img | relURL }}"
+					alt="{{ .Params.section_4.title | truncate 100 }}">
+				<img class="img-mob-2" src="{{ .Params.section_4.img | relURL }}"
+					alt="{{ .Params.section_4.title | truncate 100 }}">
+			</div>
+		</div>
+
+		<!--Content Column-->
+		<div class="content-column col-md-6 col-sm-12 col-xs-12">
+			<div class="inner-column">
+				<div class="sec-title ">
+					<h3>
+						{{ .Params.section_4.title | truncate 100 }}
+					</h3>
+
+					{{ if .Params.section_4.title_sub }}
+					<p class="fee-subtitle">
+						{{ .Params.section_4.title_sub | truncate 200 }}
+					</p>
+					{{ end }}
+				</div>
+				<ul class="checks checks--big">
+					{{ range .Params.section_4.lists }}
+					<li>
+						{{ if .title }}
+						<h3> {{ .title }} </h3>
+						{{ end }}
+						<p>
+							{{ .item }}
+						</p>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+{{ end }}
+<!-- END section_4 -->
+
+<!-- BEGIN section_5 -->
+{{ if not .Params.geo.btm }}
+{{ if .Params.geo }}
+<section class="about-section-three about-section-three--reg section-{{ .Params.geo.pos }}">
+	<div class="countries-bg"></div>
+	<div class="auto-container title-column">
+		<div class="inner-column">
+			<div class="sec-title ">
+				<h3>
+					{{ .Params.geo.title |markdownify | truncate 100 }}
+				</h3>
+			</div>
+			<div class="text">
+				<ul class="checks list-location">
+					{{ range .Params.geo.list }}
+					<li> {{ .item | truncate 50 }} </li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+<!-- END section_5 -->
+
+<!-- BEGIN section_6 -->
+{{ if $data.common.str }}
+{{ with $data.common.str }}
+
+<section class="steps-section section-str">
+	<div class="auto-container">
+		<div class="sec-title ">
+			<h3>
+				{{ .title | truncate 200 }}
+			</h3>
+		</div>
+		<div class="text subtext">
+			{{ .title_sub | truncate 300 }}
+		</div>
+
+		<div class="row clearfix steps-row">
+
+			{{ range .items }}
+			<div class="step-item col-md-3 col-sm-6 col-xs-12">
+				<div class="step-count">{{ .num | truncate 50 }}</div>
+				<img src="{{ .icon | relURL }}" alt="{{ .title | truncate 100 }}">
+				<div class="text">
+					<p> {{ .title | upper | truncate 100 }} </p>
+					{{ .description | truncate 500 }}
+				</div>
+			</div>
+			{{ end }}
+
+		</div>
+
+	</div>
+</section>
+
+{{ end }}
+{{ end }}
+<!-- END section_6 -->
+
+<!-- BEGIN section_7 -->
+{{ if .Params.section_7 }}
+<section class="pricing-section section-{{ .Params.section_7.pos }}" id="packages">
+	<div class="auto-container">
+		<div class="sec-title">
+			<h3>
+				{{ .Params.section_7.title | truncate 100 }}
+			</h3>
+		</div>
+
+		<div class="inner-content">
+			<div class="row clearfix">
+				<div class="pricing-bg"></div>
+
+				{{ range .Params.section_7.cols }}
+				<div class="col-md-6 col-sm-6">
+					<div {{ if .last }} class="pricing-block pricing-block--2" {{ else }} class="pricing-block" {{ end }}>
+						<p class="subtitle">
+							<b>
+								{{ .title | truncate 100 }}
+							</b>
+						</p>
+						<p class="pricing-text">
+							{{ .content | truncate 300 }}
+						</p>
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+
+		{{ if .Params.section_7.btn }}
+		<div class="btn-ct">
+			<a href="{{ .Params.section_7.btn.url }}" class="btn-style-five">
+				<span>
+					{{ .Params.section_7.btn.label }}
+				</span>
+			</a>
+		</div>
+		{{ end }}
+
+	</div>
+</section>
+{{ end }}
+<!-- END section_7 -->
+
+<!-- BEGIN section_8 -->
+{{ if .Params.section_8 }}
+<section class="checks-section section-{{ .Params.section_8.pos }}">
+	<div class="auto-container">
+
+		<div class="sec-title ">
+			<h3>
+				{{ .Params.section_8.title | truncate 100 }}
+			</h3>
+
+		</div>
+		<ul class="checks checks--big">
+			{{ range .Params.section_8.items }}
+			<li>
+				<h3>
+					{{ .title }}
+				</h3>
+				<p>
+					{{ .content }}
+				</p>
+			</li>
+			{{ end }}
+		</ul>
+		{{ if .Params.section_8.btn }}
+		<div class="btn-ct">
+			<a href="{{ .Params.section_8.btn.url }}" class="btn-style-five">
+				<span>
+					{{ .Params.section_8.btn.label }}
+				</span>
+			</a>
+		</div>
+		{{ end }}
+
+	</div>
+</section>
+{{ end }}
+<!-- END section_8 -->
+
+<!-- BEGIN section_9 -->
+{{ if .Params.section_9 }}
+<section class="table-section table-section--maintenance section-{{ .Params.section_9.pos }}" id="packages">
+	<div class="auto-container">
+
+		<div class="inner-content">
+			<div class="row clearfix">
+				{{ range .Params.section_9.cols }}
+				<div class="col-md-6">
+					<div class="list-bg">
+						<h6>
+							{{ .col.title | truncate 100 }}
+						</h6>
+				    	
+						<ul class="checks">
+				    		{{ range .col.lists }}
+							<li>
+								{{ .content | markdownify }}
+							</li>
+							{{ end }}
+				    	</ul>
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+
+		{{ if .Params.section_9.btn }}
+		<div class="btn-ct">
+				<a href="{{ .Params.section_9.btn.url }}" class="btn-style-five">
+					<span>
+						{{ .Params.section_9.btn.label | truncate 100 }}
+					</span>
+				</a>
+			</div>
+		{{ end }}
+	</div>
+</section>
+{{ end }}
+<!-- END section_9 -->
+{{- partial "_contacts.html" . -}}
+</article>
+
+{{- partial "footer.html" . -}}
+{{ end }}

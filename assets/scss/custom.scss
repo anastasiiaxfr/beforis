@@ -1,0 +1,955 @@
+/* Modrox  Architecture and Interior Design HTML Template */
+
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global
+4. Main Header / Style Two / Style Three
+5. Main Slider
+6. Services Section
+7. Studio Section
+8. Specilization Section
+9. Projects Section
+10. Testimonial Section / Style Two
+11. Clients Section
+12. Form Section
+13. Main Footer
+14. What We Do Section
+15. News Section
+16. Gallery Section
+17. Skills Section
+18. Team Section
+19. Gallery Masonry Section
+20. About Section
+21. Comming Soon Section
+22. Faq Section
+23. Blog Sidebars
+24. Shop Item
+25. Shop Single
+26. Cart Page
+27. Map Section
+28. Contact Form
+29. Single page
+
+**********************************************/
+
+.blog {
+    &-single, &-classic {
+        &.padding-right {
+            padding-right: 30px;
+        }
+        .news-block-four {
+        margin-bottom: 40px;
+    }
+    
+    } 
+}
+
+
+.body-bg {
+    @include position(fixed, (l, 0), (t, 0));
+    display: block;
+    @include sz(100%, 100%);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*** 
+
+====================================================================
+	Shop Features Section
+====================================================================
+
+***/
+
+.shop-features-section {
+    position: relative;
+    padding: 40px 0px 20px;
+    background-color: $grey20;
+}
+
+
+
+/*** 
+
+====================================================================
+	Related Project Section
+====================================================================
+
+***/
+
+.related-products {
+    position: relative;
+    padding: 0px 0px 0px;
+
+    .sec-title-two {
+        margin-bottom: 50px;
+    }
+    
+}
+
+
+.payment-options {
+    position: relative;
+    @include margin((t, 20px), (b, 20px));
+}
+
+
+
+.step {
+    &-section {
+        &--taxation {
+            padding-top: 0;
+        }
+    
+        &--merchant {
+            padding-top: 0;
+        }
+    
+        .sec-title {
+            margin-bottom: 7px;
+        }
+    
+        .subtext {
+            margin-bottom: 40px;
+
+            @include font(18, 18, 600);
+        }
+    }
+    
+    &-item {
+        position: relative;
+        padding: 30px 17px 0;
+    
+        &:first-of-type {
+            padding-left: 0;
+        }
+    
+        
+        &:last-of-type {
+            padding-right: 0;
+        }
+    
+        .step-count {
+            @include position(absolute, (l, 10px), (t,  0px));
+            @include font(190, 190, 600, Arial);
+            color: $grey13;
+           
+            z-index: 1;
+        }
+    
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            @include sz(80px, 80px);
+            z-index: 2;
+        }
+    
+        .text {
+            min-height: 54px;
+            @include font(14, 14*1.6, 400, $ffText);
+            z-index: 2;
+        }
+    
+        p {
+            margin-bottom: 14px;
+            @include font(16, 16, 700, $ffHeading);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+    }
+    
+    
+}
+
+
+
+.countries-bg {
+    @include sz(57%, 66%);
+    @include position(absolute, (r, 0), (t, 120px));
+
+    background: url("../../images/map.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+.fee-section {
+    padding: 0;
+
+    .row {
+        margin: 0 0 0 -15px;
+    }
+
+   &--merchant {
+      & > .row {
+           @include flex(flex, stretch, initial, wrap);
+      }
+
+    .col-img {
+        @include flex(flex, flex-end, flex-start, wrap);
+    }
+
+    .img-mob, .img-mob-2 {
+        display: none;
+    }
+
+    .img-fee {
+        width: 100%;
+
+        img {
+            @include sz(100%, auto);
+            max-width: 100%;
+        }
+    }
+
+   }
+
+   .content-column {
+       padding: 4%;
+   }
+}
+
+
+
+
+.icon-loc {
+    display: inline-block;
+    @include sz(33px, 33px);
+    margin-right: 5px;
+    transition: all 0.2s;
+    
+    background-image: url(../../images/icons/loc.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-mail {
+    display: inline-block;
+    @include sz(26px, 26px);
+    margin-right: 5px;
+    transition: all 0.2s;
+
+    background-image: url(../../images/icons/mail.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img-fee img {
+    height: 100%;
+}
+
+.steps-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.pricing-section {
+    .sec-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .auto-container {
+        .inner-content {
+            max-width: 1330px;
+            @include margin((l, auto), (r, auto));
+            @include flex(flex, center, center, wrap);
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .row {
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+
+.pricing-section {
+    .pricing-bg {
+        
+        @include position(absolute, (r, 0), (t, 0));
+        @include sz(100%, 100%);
+        
+        background-image: url(../../images/pricing.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &--2 {
+            background-image: url(../../images/pricing-2.png);
+        }
+    }
+
+    .subtitle {
+        font-size: 23px;
+        margin-bottom: 16px;
+    }
+
+    .pricing-text {
+        margin-top: 8px;
+        @include font(16, 16*1.6, 700);
+    }
+
+    &--maintenance .pricing-block.pricing-block--2 {
+        padding: 40px 40px 40px 90px;
+    }
+    
+}
+
+
+.pricing-block {
+    padding: 60px 90px 60px 40px;
+
+    &--2 {
+        padding: 60px 40px 60px 90px;
+    }
+}
+
+
+.service-tax {
+    .main-slider .content {
+        max-width: 70%;
+    }
+
+    .main-slider .content .title {
+        max-width: 65%;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    
+}
+
+.main-slider {
+    background-color: $grey4;
+    &-two h2 {
+        @include margin((t, 5px), (b, 10px));
+        font-size: 42px;
+    }
+}
+
+.checks-section {
+    .sec-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    ul.checks {
+        h3 {
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            @include font(16, 16*1.5, 700, $ffHeading);
+        }
+
+        li {
+            display: inline-block;
+            width: 49%;
+            padding-right: 135px;
+            vertical-align: top;
+
+            @include maw(528) {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            p {
+                line-height: 1.6;
+            }
+        
+        }
+    }
+}
+
+.checks-section .btn-ct {
+    margin-top: 0;
+}
+
+.service-tax {
+    .specialization-block {
+        width: auto;
+        margin: 0 50px;
+    
+        img {   
+            @include sz(auto, 110px);
+        }
+    }
+
+    .specialization-section {
+        .sec-title-two h2 {
+            margin-top: 0;
+
+            @include font(28, 28, 400, $ffHeading);
+
+            
+        }
+    }
+
+
+}
+
+.specialization-section--license .specialization-block {
+    width: 16%;
+}
+
+.pricing-section {
+    &--license {
+        padding: 0;
+    }
+
+    &--account {
+        padding-bottom: 0;
+    }
+
+    &--license .pricing-block {
+        padding: 31px 110px;
+    }
+
+    &.section-3 {
+        padding-bottom: 0;
+    }
+}
+
+
+.tg-block {
+    display: block;
+    @include position(fixed, calc(2% + 17px), calc(7% + 115px));
+    height: 64px;
+}
+
+
+
+.tg-tooltip {
+    @include position(absolute, (l, 6px), (b, 94px));
+    width: 175px;
+    padding: 14px;
+    opacity: 0;
+    visibility: hidden;
+  
+    @include font(11, 13, 400, $ffText);
+    
+    color: $white;
+    background: $blue;
+    transition: all 0s ease-in-out;
+
+    svg {
+        @include position(absolute, (l, 17px), (b, -14px));
+        @include sz(18px, 14px);
+    }
+}
+
+.tg-ct:hover .tg-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-tg {
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+
+        path {
+            transition: all 300ms ease;
+        }
+    }
+
+    &:hover svg path {
+        stroke: $grey12;
+    }
+}
+
+.stat-block {
+    display: inline-block;
+
+    &s {
+        margin-top: 66px;
+    }
+
+    .num {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 12px;
+      
+        @include font(28, 28, 700, $ffHeading);
+
+        color: $grey9;
+    }
+
+    .descr {
+        margin-top: 4px;
+        
+        @include font(18, 18, 700, $ffHeading);
+        text-transform: uppercase;
+    
+        color: $grey9;
+    }
+
+    &:first-child {
+        margin-right: 70px;
+    }
+}
+
+.list {
+    &-double {
+        margin-top: 72px;
+        column-count: 2;
+    
+        &.checks li {
+            margin-bottom: 22px;
+        }
+    }
+
+    &-bg {
+        align-self: center;
+        background-color: $grey13;
+
+        .table-section & {
+            padding: 30px 60px;
+        }
+    }
+}
+
+.project-section--cert {
+    // .architecture-block .text {
+    //     font-size: 16px;
+    // }
+    
+
+    .architecture-block {
+         margin-bottom: 60px;
+        .inner-box .lower-box {
+            padding-top: 32px;
+        }
+    
+    }
+  
+
+    .btn-ct {
+        margin-top: 0;
+    }
+
+    // .sec-title {
+    //     margin-bottom: 60px;
+    // }
+}
+
+.pricing-section--cert {
+    padding-top: 0;
+}
+
+
+.no {
+    &pt {
+        padding-top: 0;
+    }
+    &pb {
+        padding-bottom: 0;
+    }
+}
+
+.logo-block {
+    &--bg img {
+        padding: 5px 8px 7px;
+        background: $orange;
+        border-radius: 10px;
+    }
+
+    img {
+        max-width: 150px;
+        width: 100%;
+        
+        @include sz(150px, 30px);
+        object-fit: contain;
+    }
+
+    &s {
+        margin-top: 50px;
+
+        @include flex(flex, center, space-between, wrap);
+    }
+}
+
+/*** 
+
+====================================================================
+	Single Page
+====================================================================
+
+ ***/
+
+*::selection {
+    background: aliceblue;
+}
+
+.page {
+
+    &-hero {
+        padding: 50px 0;
+
+        background-color: $grey4;
+        color: $white;
+    }
+
+    &-title {
+        position: relative;
+        padding: 55px 0px;
+        text-align: center;
+      
+        background-color: $grey11;
+    
+        h1 {
+            position: relative;
+            color: $grey4;
+
+            @include font(35, 35, 700);
+        }
+    }
+
+    &-container {
+        //max-width: 1268px;
+        max-width: 960px;
+        width: 80%;
+        padding: 0;
+
+        @include margin((l, auto), (r, auto));
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &-content {
+        @include padding((t, 100px), (b, 100px));
+        font-family: var(--ffSecondary), var(--ffBack);
+        color: $black;
+
+        b, strong {
+            color: $black;
+        }
+     
+        ul, ol {
+            @include margin((t, 25px), (b, 25px));
+            li {
+                //@include font(16, 26, 400, $ffText);
+                
+                @include font(14, 20, 500, $ffText);
+                color: darken($grey4, 1%);
+
+                list-style-type: initial;
+
+                @include margin((l, 20px), (b, 10px));
+
+                &::last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        h1 {
+            @include margin((b, 25px), (t, 0));
+            @include font(22, 22, 700, $ffHeading);
+
+       }
+
+        h2 {
+            @include margin((t, 50px), (b, 20px));
+            @include font(22, 22, 700, $ffHeading);
+        }
+
+        h3 {
+            @include margin((t, 50px), (b, 15px));
+            @include font(22, 22, 700, $ffHeading);
+
+        }
+
+        h4 {
+            @include margin((t, 50px), (b, 25px));
+            @include font(18, 26, 700, $ffHeading);
+        }
+
+        h1, h2, h3, h4, h5, h6, b, strong {
+            color: darken($grey, 20%);
+            font-family: $ffHeading;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        a {
+            font-weight: 600;
+            color: darken($grey, 20%);
+        }
+
+        .img-fluid {
+            display: block;
+            object-fit: cover;
+
+            @include margin((t, 50px), (b, 50px));
+        }
+
+        p {
+            margin: 0;
+
+            @include font(15, 22, 500, $ffText);
+            color: darken($grey4, 1%);
+    
+            & + p {
+                @include margin((t, 25px), (b, 0px));
+            }
+        }
+
+        @media only screen and (max-width: 728px){
+            @include padding((t, 30px), (b, 30px));
+        }
+
+    }
+}
+
+.section {
+    &-1 {
+        order: 1;
+    }
+
+    &-2 {
+        order: 2;
+    }
+
+    &-3 {
+        order: 3;
+    }
+
+    &-4 {
+        order: 4;
+
+        padding-bottom: 0;
+    }
+
+    &-5 {
+        order: 5;
+        padding-bottom: 0;
+    }
+
+    &-6 {
+        order: 6;
+    }
+
+    &-7 {
+        order: 7;
+    }
+
+    &-str {
+        order: 100500;
+    }
+}
+
+
+.checks-section.section-1 {
+    padding-bottom: 140px;
+}
+
+.country {
+    &__block {
+        display: flex;
+        align-items: center;
+    
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        @include margin((l, 30px), (b, 0));
+        @include font(24, 24, 700, $ffHeading);
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+
+.breadcrumb {
+    width: 100%;
+    margin: 0 auto;
+
+    @include padding((t, 45px), (b, 65px));
+    &__container {
+        background-color: $grey13;
+        border: 1px solid rgba($grey5, 0.15);
+        border-width: 1px 0;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+       
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    &__item {
+
+        padding-right: 10px;
+
+        @include font(16, 26, 400);
+
+        color: $grey;
+
+        &--active {
+            color: $black;
+        }
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+        &:last-child:after {
+            content: initial;
+        }
+
+        &::after {
+            content: "\f105";
+            font-family: "FontAwesome";
+
+            @include margin((l, 10px), (r, 10px));
+            color: $grey;
+        }
+    }
+}
+
+
+.mb {
+    &-md {
+        margin-bottom: 60px;
+
+        @include maw(528){
+            margin-bottom: 30px;
+        }
+    }
+    &-0 {
+        margin-bottom: 0;
+    } 
+}
+
+.mt {
+    &-md {
+        margin-top: 60px;
+
+        @include maw(528){
+            margin-top: 30px;
+        }
+    }
+}
+
+.pb {
+    &-0 {
+        padding-bottom: 0;
+    }
+    &-lg {
+        padding-bottom: 140px;
+        @include maw(968){ 
+           padding-bottom: 6vmax;
+        }
+        @include maw(728){
+            padding-bottom: 60px;
+        }
+         @include maw(568){
+            padding-bottom: 60px;
+         }
+    }
+}
+
+.pt {
+    &-lg {
+        padding-top: 140px;
+        @include maw(968){
+           padding-top: 6vmax;
+        }
+        @include maw(568){
+            padding-top: 30px;
+        }
+    }
+}
+
+.py {
+    &-none {
+        @include padding((t, 0), (b, 0));
+    }
+    &-default {
+        @include padding((t, inherit), (b, inherit));
+        @include maw(968){
+            @include padding((t, 6vmax), (b, 6vmax));
+        }
+    }
+    &-lg {
+       // @include padding((t, 140px), (b, 140px));
+        @include padding((t, 6vmax), (b, 6vmax));
+        
+        @include maw(728){
+            //@include padding((t, 50px), (b, 50px));
+            @include padding((t, 7vmax), (b, 7vmax));
+        }
+
+        @include maw(568){
+           @include padding((t, 40px), (b, 40px));
+        }
+    }
+}
+
+.d {
+    &-block {
+        display: block;
+    }
+    &-none {
+        display: none;
+    }
+}
+
+.row {
+    &--0 {
+        max-width: 60%;
+
+        @include maw(728){ 
+            max-width: 100%;
+        }
+        @include maw(568){ 
+            @include margin((t, 20px), (b, 40px));
+        }
+    }
+    &--1 {
+        @include margin((t, 0px), (b, 30px));
+
+        @include maw(568){ 
+            @include margin((t, 30px), (b, 30px));
+            text-align: center;
+        }
+    }
+    &--2 {
+        @include margin((t, 140px), (b, 60px));
+        @include maw(968){
+            @include margin((t, 60px), (b, 60px));
+        }
+
+        @include maw(568){
+            @include margin((t, 60px), (b, 60px));
+        }
+    }
+
+    &--3 {
+        margin-top: 60px;
+        @include maw(568){
+            margin-top: 0;
+        }
+        
+    }
+}

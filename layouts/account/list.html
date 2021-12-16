@@ -1,0 +1,171 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+{{- partial "header.html" . -}}
+
+<div class="page--account">
+<!-- BEGIN hero -->
+
+<!-- {{ if $data.account.hero }}
+	{{ with $data.account.hero }}
+
+	{{ partial "_hero-single.html" . }}
+    
+	{{ end }}
+{{ end }} -->
+{{ if .Params.hero.enable }}
+	{{ with .Params.hero }}
+		{{ partial "_hero-single.html" . }}
+	{{ end }}
+{{ end }}
+<!-- END hero -->
+
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.project }}
+	{{ with $data.account.project }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_project.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.project.enable }}
+	{{ with .Params.project }}
+<div class="row--2">
+	{{ partial "_project.html" . }}
+</div>
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.fee }}
+	{{ with $data.account.fee }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_fee.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.fee.enable }}
+	{{ with .Params.fee }}
+		{{ partial "_fee.html" . }}
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.domains }}
+	{{ with $data.account.domains }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.domains.enable }}
+	{{ with .Params.domains }}
+		{{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }} 
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.rates }}
+	{{ with $data.account.rates }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_pricing.html" . }}
+	{{ end }}
+{{ end }} -->
+{{ if .Params.rates.enable }}
+	{{ with .Params.rates }}
+
+		{{ partial "_pricing.html" . }}
+
+	{{ end }}
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.geo }}
+	{{ with $data.account.geo }}
+		{{ $url := .Scratch.Set $.URL }}
+		{{ partial "_geo.html" . }}
+	{{ end }}
+{{ end }} -->
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ $url := .Scratch.Get "url" }}
+{{ $pg := .Scratch.Get "account" }}
+
+<section class="about-section-three" id="geo" style="padding-top: 0;">
+    <div class="countries-bg"></div>
+    <div class="auto-container title-column">
+        <div class="inner-column">
+            <div class="sec-title">
+               
+				{{ if $data.account.geo }}
+				{{ with $data.account.geo }}
+				<h3>
+                    {{ .title | markdownify | truncate 100 }}
+                </h3>
+				{{ end }}
+				{{ end }}  
+               
+               
+            </div>
+            <div class="text">
+
+		{{ partial "_geo.html" . }}
+</div>
+</div>
+</div>
+</section> -->
+
+
+<section class='about-section-three pt-lg' id="geo">
+    <div class="countries-bg"></div>
+    <div class="auto-container title-column">
+        <div class="inner-column">
+           
+				{{ if .Params.geo.enable }}
+				{{ with .Params.geo }}
+				<h2>
+					{{ .title | markdownify | truncate 100 }}
+				</h2>
+				{{ end }}
+				{{ end }}
+          
+            <div class="mt-md">
+		{{ partial "_geo.html" . }}
+		</div>
+	</div>
+	</div>
+</section>
+
+
+<!-- END section -->
+
+
+<!-- BEGIN section -->
+<!-- {{ if $data.account.str }}
+{{ with $data.account.str }}
+
+	{{ .Scratch.Set "pdt" "0" }}
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }} -->
+{{ if .Params.str.enable }}
+{{ with .Params.str }}
+
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }}
+<!-- END section -->
+
+{{- partial "_contacts.html" . -}}
+</div>
+
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}}
+{{ end }}
+

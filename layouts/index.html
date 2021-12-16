@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage }}
+<style>
+</style>
+{{ end }}
+
+{{ "<!-- Hero Section -->" | safeHTML }}
+{{ "<!-- End of Hero Section -->" | safeHTML }}
+
+{{"<!-- banner-feature -->" | safeHTML}}
+{{ if $data.homepage.section.enable }}
+{{ with $data.homepage }}
+{{ .title }}
+{{ end }}
+{{ end }}
+  
+<!-- {{- partial "_particles.html" . -}} -->
+{{- partial "header.html" . -}}
+
+
+{{ if $data.homepage.hero.enable }}
+	{{ with $data.homepage.hero }}
+
+    <section class="hero" style="background-image: url({{ .hero_bg | relURL }});">
+        <div class="auto-container">
+            <div class="row">
+                <div class="content animated fadeInUp">
+                    {{ if .hero_title_sup }}
+                    <h2 class="heading_sup">
+                        {{ .hero_title_sup | markdownify | truncate 150 }}
+                    </h2>
+                    {{ end }}
+                    <h1>
+                        {{ .hero_title | markdownify | truncate 150 }}
+                    </h1>
+    
+                    {{ if .hero_title_sub }}
+                    <h2 class="heading_sub">
+                       {{ .hero_title_sub | markdownify | truncate 150 }}
+                    </h2>
+                    {{ end }}
+    
+                    {{ if .hero_btn_label }}
+                
+                        <a class="fadeInUp btn-main--white" href=" {{ .hero_btn_url }}" style="display: block;width: fit-content;">
+                        {{ .hero_btn_label }}
+                        </a>
+                   
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+	{{ end }}
+{{ end }}
+
+{{- partial "_home-section-1.html" . -}}
+
+{{- partial "_home-section-2.html" . -}}
+
+{{- partial "_partners.html" . -}}
+
+{{- partial "_contacts.html" . -}}
+
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}}
+{{ end }}
+

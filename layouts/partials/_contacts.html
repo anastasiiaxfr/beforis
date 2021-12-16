@@ -1,0 +1,40 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<!--Form Section-->
+<a name="contact"></a>
+<section class="form-section">
+  <div class="auto-container">
+    <h2>
+      {{ .Site.Params.form.title }}
+    </h2>
+
+    <h5>
+      {{ .Site.Params.form.title_sub }}
+    </h5>
+
+    <div class="row">
+      <div class="form-column">
+        {{- partial "_form.html" . -}}
+      </div>
+
+      <div class="info-column">
+        <div class="inner-column">
+          <div class="contact-text">
+            {{ range .Site.Params.contacts }}
+            <div>
+              <div class="contact-title">
+                <span class="icon {{ .icon }}"></span>
+                {{ .title | markdownify | truncate 100 }}
+              </div>
+              {{ if .description }} {{ .description | markdownify }} {{ end }}
+              {{ if .email }} {{ .email | markdownify }} {{ end }}
+            </div>
+
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Form Section-->

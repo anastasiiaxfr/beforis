@@ -1,0 +1,22 @@
+<!-- BEGIN header -->
+
+<header class="main-header">
+  <div class="auto-container">
+    <!-- Main Box -->
+    <div class="main-box">
+      <div class="logo-box">
+        {{ .Scratch.Set "img" .Site.Params.logo }}
+         {{ .Scratch.Set "logo_w" 120 }} 
+        {{- partial "_logo.html" . -}}
+      </div>
+
+      <!--Nav Outer-->
+     
+		  {{- partial "_nav.html" . -}}
+     
+      <!--Nav Outer End-->
+    </div>
+  </div>
+</header>
+
+<!-- END header -->

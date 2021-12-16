@@ -1,0 +1,184 @@
+
+/*** 
+
+====================================================================
+	News Section
+====================================================================
+
+***/
+
+.news-section {
+    position: relative;
+    padding: 95px 0px 40px;
+
+    .sec-title-two {
+        margin-bottom: 50px;
+    }
+    
+}
+
+
+.news-block {
+    position: relative;
+    margin-bottom: 40px;
+
+    .inner-box {
+        position: relative;
+
+        .image {
+            position: relative;
+
+            img {
+                position: relative;
+                width: 100%;
+                display: block;
+            }
+
+            .overlay-box {
+
+                @include position(absolute, (l, 0), (t, 0));
+                @include sz(100%, 100%);
+                display: block;
+                transition: all 300ms ease;
+                background:(top,rgba($black, 0), rgba($black, 0.5));
+
+                .content-box {
+                    @include position(absolute, (l, 0), (b, 0));
+                    padding: 0px 28px 30px;
+
+                    .post-date {
+                        position: relative;
+                       
+                        color: $white;
+                        margin-bottom: 8px;
+
+                        @include font(13, 13, 400);
+                    }
+
+                    .content {
+                        position: relative;
+
+                        h3 {
+                            position: relative;
+
+                            @include font(18, 18 * 1.5, 400);
+
+                            a {
+                                position: relative;
+                                color: $white;
+                                transition: all 0.3s ease;
+
+                                &:hover {
+                                    color: $yellow2;
+                                    text-decoration: underline;
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                }
+                        
+               
+            }
+            
+        }
+        
+    }
+}
+
+
+/*News Block Two*/
+
+.news-block-two {
+    position: relative;
+    margin-bottom: 40px;
+
+    .inner-box {
+        position: relative;
+        padding: 38px 35px 22px;
+
+        border: 1px solid $grey38;
+        background-color: $grey39;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+                .post-date, h3 a, .text, .lower-box .info-tag,
+                .lower-box .info-tag span {
+                color: $white;
+                }
+
+           border-color: $grey4;
+           background-color: $grey4;
+       
+           .lower-box {
+               border-top-color: rgba($white, 0.2);
+           }
+        }
+        
+
+        .lower-box {
+            position: relative;
+            padding-top: 14px;
+
+            border-top: 2px solid $grey34;
+
+            .info-tag {
+                position: relative;
+
+                color: $grey35;
+
+                font-size: 15px;
+                transition: all 0.3s ease;
+               
+            }
+        }
+
+        .upper-box {
+            position: relative;
+
+
+            .post-date {
+                position: relative;
+                
+                @include font(13, 13, 400, $ffHeading);
+                
+                margin-bottom: 8px;
+                transition: all 0.3s ease;
+                
+                color: $grey35;
+            }
+
+            h3 {
+                position: relative;
+                margin-bottom: 15px;
+                
+                @include font(18, 18 * 1.6, 600);
+           
+                color: $grey37;
+
+                a {
+                    position: relative;
+                    color: $grey37;
+                    transition: all 0.3s ease;
+                }
+                
+            }
+
+            .text {
+                position: relative;
+                margin-bottom: 18px;
+
+                @include font(16, 16*1.9, 400);
+                color: $grey36;
+
+                transition: all 0.3s ease;
+            }
+            
+            
+        }
+        
+    }
+    
+}

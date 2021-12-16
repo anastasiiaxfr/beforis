@@ -1,0 +1,235 @@
+
+
+/*** 
+
+====================================================================
+	About Section
+====================================================================
+
+***/
+
+.about-section {
+    position: relative;
+
+    .inner-container {
+        position: relative;
+        padding: 95px 0px 85px;
+
+        border-bottom: 1px solid $grey53;
+    }
+    
+    .video-column {
+        position: relative;
+    
+        .inner-column {
+            position: relative;
+            padding-left: 20px;
+        }
+    }
+
+    .content-column {
+        position: relative;
+        padding-bottom: 40px;
+
+        h2 {
+            position: relative;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+
+            @include font(35, 35*1.2, 700);
+            color: $grey4;
+            
+
+            &:after {
+                content: "";
+
+                @include position(absolute, (l, 0), (b, 0));
+                @include sz(70px, 2px);
+         
+                background-color: $grey12;
+            }
+            
+            .text {
+                position: relative;
+                margin-bottom: 30px;
+               
+                @include font(16, 16*1.8, 400);
+    
+                color: $grey15;
+            }
+            
+        }
+    }
+    
+}
+
+
+/*** 
+
+====================================================================
+	About Section Two
+====================================================================
+
+***/
+
+.about-section-two {
+    position: relative;
+    padding: 80px 0px 90px;
+
+    .info-column {
+        position: relative;
+        margin-bottom: 40px;
+
+        .inner-column {
+            position: relative;
+            padding-top: 78px;
+
+            .image-column {
+                position: relative;
+            }
+            
+
+            h2 {
+                position: relative;
+                margin-bottom: 5px;
+                
+                color: $grey4;
+                
+                @include font(60, 60*1.2, 600);
+            }
+            
+
+            .title-box {
+                position: relative;
+
+                padding-bottom: 25px;
+                margin-bottom: 35px;
+
+                &:after {
+                    content: "";
+                    @include position(absolute, (l, 0), (b, 0));
+                    @include sz(55px, 3px);
+                    background-color: $grey5;
+                }
+            }
+            
+            .designation {
+                position: relative;
+
+                @include font(16, 16, 300, $ffHeading);
+                color: $grey15;
+     
+            }
+
+            .info-box {
+                position: relative;
+                padding-left: 60px;
+
+                .phone-icon {
+                    @include position(absolute, (l, 0), (t, 4px));
+                    @include sz(36px, 36px);
+               
+                    color: $white;
+
+                    @include font(24, 36, 400);
+                    text-align: center;
+                   
+                    border-radius: 50%;
+                    background-color: $grey5;
+                }
+
+                h3 {
+                    position: relative;
+                    margin-bottom: 12px;
+                   
+                    @include font(28, 28*1.2, 700);
+                    color: $grey4;
+                }
+
+                h4 {
+                    position: relative;
+                    margin-bottom: 26px;
+                    color: $grey4;
+                    
+                    @include font(20, 20, 600);
+                }
+                
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+	About Section Three
+====================================================================
+
+***/
+
+.about-section-three {
+    position: relative;
+
+  
+
+    .big-image {
+        position: relative;
+        margin-bottom: 90px;
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+        
+    }
+
+    .title-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+        }
+        
+    }
+
+    .content-column {
+        position: relative;
+
+        .inner-column {
+            position: relative;
+
+            .text {
+                position: relative;
+
+                p {
+                    position: relative;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                }
+                
+            }
+
+            .big-text {
+                position: relative;
+                color: $grey4;
+               
+                @include font(22, 22*1.4, 300, $ffText);
+            }
+            
+        }
+    }
+
+
+
+    &--account {
+        padding: 0;
+    }
+
+    &--reg {
+        padding-bottom: 0;
+    }
+  
+}
+

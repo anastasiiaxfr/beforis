@@ -1,0 +1,148 @@
+{{ define "main" }}
+ {{ $data := index .Site.Data .Site.Language.Lang }} 
+{{- partial "header.html" . -}}
+
+<!-- BEGIN hero -->
+
+<!-- {{ if $data.registration.hero }}
+	{{ with $data.registration.hero }}
+
+	{{ partial "_hero-single.html" . }}
+    
+	{{ end }}
+{{ end }} -->
+{{ if .Params.hero.enable }}
+{{ with .Params.hero }} 
+{{ partial "_hero-single.html" . }} 
+{{ end }} 
+{{ end }}
+<!-- END hero -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.registration.project }}
+	{{ with $data.registration.project }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_project.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.project.enable }} 
+{{ with .Params.project }} 
+{{ partial "_project.html" . }} 
+{{ end }} 
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.registration.benefits }}
+	{{ with $data.registration.benefits }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_table.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.benefits.enable }}
+ {{ with .Params.benefits }}
+  {{ partial "_table.html" . }}
+ {{ end }} 
+ {{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.registration.domains }}
+	{{ with $data.registration.domains }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_domains-single.html" . }}
+    {{ end }}
+{{ end }}  -->
+{{ if .Params.domains.enable }} 
+{{ with .Params.domains }} 
+{{ partial "_domains-single.html" . }} 
+{{ end }}
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.registration.fee }}
+	{{ with $data.registration.fee }}
+		{{ .Scratch.Set "pdt" "0" }}
+		{{ partial "_fee.html" . }}
+	{{ end }}
+{{ end }} -->
+{{ if .Params.fee.enable }} 
+{{ with .Params.fee }} 
+{{ partial "_fee.html" . }}
+{{ end }} 
+{{ end }}
+<!-- END section -->
+
+<!-- BEGIN section -->
+
+<!-- {{ $url := .Scratch.Get "url" }}
+{{ $pg := .Scratch.Get "registration" }}
+
+<section class="about-section-three" id="geo">
+    <div class="countries-bg"></div>
+    <div class="auto-container title-column">
+        <div class="inner-column">
+            <div class="sec-title">
+               
+				{{ if $data.registration.geo }}
+				{{ with $data.registration.geo }}
+				<h3>
+                    {{ .title | markdownify | truncate 100 }}
+                </h3>
+				{{ end }}
+				{{ end }}  
+               
+               
+            </div>
+            <div class="text">
+
+{{ partial "_geo.html" . }}
+</div>
+</div>
+</div>
+</section> -->
+
+<section
+  class="about-section-three {{ if .Params.geo.padding_bottom }} pb-lg {{ end }} {{ if .Params.geo.padding_default }} py-default {{ end }} {{ if .Params.geo.padding_none }} py-0 {{ end }} {{ if .Params.geo.padding_top_bottom }} py-lg {{ end }}"
+  id="geo"
+>
+  <div class="countries-bg"></div>
+  <div class="auto-container title-column">
+    <div class="inner-column">
+      {{ if .Params.geo.enable }} 
+      {{ with .Params.geo }}
+      <h2>
+        {{ .title | markdownify | truncate 100 }}
+      </h2>
+      {{ end }} 
+      {{ end }}
+      <div class="mt-md">
+        {{ partial "_geo.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END section -->
+
+<!-- BEGIN section -->
+<!-- {{ if $data.registration.str }}
+{{ with $data.registration.str }}
+
+	{{ .Scratch.Set "pdt" "0" }}
+	{{ partial "_str.html" . }}
+
+{{ end }}
+{{ end }} -->
+{{ if .Params.str.enable }} 
+{{ with .Params.str }}
+{{ partial "_str.html" . }}
+{{ end }} 
+{{ end }}
+<!-- END section -->
+
+{{- partial "_contacts.html" . -}} 
+{{- partial "footer.html" . -}}
+{{- partial "_widget.html" . -}} 
+{{ end }}

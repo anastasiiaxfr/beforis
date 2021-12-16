@@ -1,0 +1,63 @@
+---
+label: post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- name: url
+  type: text
+  config:
+    required: false
+  label: url
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: author
+  label: author
+- name: country_code
+  type: text
+  config:
+    required: false
+  label: country_code
+- name: country_flag
+  type: file
+  config:
+    maxSize: 64
+  label: country_flag
+- name: country_title
+  type: text
+  config:
+    required: false
+  label: country_title
+- type: text
+  name: hero_title_sup
+  label: hero_title_sup
+- type: text
+  name: hero_title_sub
+  label: hero_title_sub
+- type: text
+  name: hero_title
+  label: hero_title
+- type: file
+  name: hero_bg
+  label: hero_bg
+- type: text
+  name: hero_btn_label
+  label: hero_btn_label
+- type: text
+  name: hero_btn_url
+  label: hero_btn_url
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: type
+  label: type

@@ -1,0 +1,73 @@
+.table {
+    margin-bottom: 0;
+    width: 100%;
+
+    table {
+        width: 100%;
+    }
+
+    & > tbody > tr > td {
+        padding: 0;
+    }
+
+    &-bordered {
+
+        td,
+        th {
+            padding: 18px 24px;
+        }
+    }
+
+    &-ct {
+        overflow-x: scroll;
+    }
+
+    .subtitle {
+        font-size: 17px;
+        color: $white;
+    }
+
+    li {
+        padding: 6px 0;
+        font-weight: 500;
+        color: $white;
+    }
+
+    th {
+        padding: 20px 0 20px;
+
+        @include font(15, 26, 600, $ffText);
+        text-align: center;
+
+        background-color: rgba($grey18, 0.15);
+        color: $black;
+
+    }
+
+    tr:hover {
+        background-color: rgba($grey18, 0.01);
+    }
+
+    td {
+        padding: 0;
+
+        @include font(13, 26, 400);
+
+    }
+
+    th, td {
+        border: 1px solid rgba($grey18, 0.15);
+        user-select: none;
+    }
+
+    table td {
+        padding: 25px;
+        border: none;
+    }
+
+    &-wrap {
+        max-width: 100%;
+        margin: 40px auto;
+    }
+
+}

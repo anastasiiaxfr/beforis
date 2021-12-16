@@ -1,0 +1,47 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<section class='steps-section {{ if .padding_bottom }} pb-lg {{ end }} {{ if .padding_default }} py-default {{ end }} {{ if .padding_none }} py-0 {{ end }} {{ if .padding_top_bottom }} py-lg {{ end }}'>
+	<div class="auto-container">
+		<div class="sec-title">
+			<h3>Простой процесс сотрудничества</h3>
+		</div>
+		<div class="text subtext">Всего 4 шага — и ваша компания зарегистрирована.</div>
+
+		<div class="row clearfix steps-row">
+			<div class="step-item col-md-3 col-sm-6 col-xs-12">
+				<div class="step-count">1</div>
+				<img src="images/steps/2.svg" alt="">
+				<div class="text">
+					<p>Консультация </p>
+					Знакомимся и  обсуждаем ваши цели и пожелания. После этого менеджер формирует несколько предложений. 
+				</div>
+			</div>
+			<div class="step-item col-md-3 col-sm-6 col-xs-12">
+				<div class="step-count">2</div>
+				<img src="images/steps/4.svg" alt="">
+				<div class="text">
+					<p>Согласование </p>
+					Выбираем и  согласовываем оптимальный вариант инкорпорации. Условия  закрепляем в договоре.
+				</div>
+			</div>
+			<div class="step-item col-md-3 col-sm-6 col-xs-12">
+				<div class="step-count">3</div>
+				<img src="images/steps/6.svg" alt="">
+				<div class="text">
+					<p>Оплата </p>
+					Вы оплачиваете указанный в договоре список услуг, мы готовим документы и запускаем процесс регистрации вашей компании.
+				</div>
+			</div>
+			<div class="step-item col-md-3 col-sm-6 col-xs-12">
+				<div class="step-count">4</div>
+				<img src="images/steps/8.svg" alt="">
+				<div class="text">
+					<p>Регистрация </p>
+					Наш менеджер контролирует весь процесс инкорпорации и отправит вам готовый пакет документов, когда все будет готово.
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</section>

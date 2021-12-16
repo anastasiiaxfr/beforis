@@ -1,0 +1,19 @@
+.education-section {
+    .notes-column {
+        h3 {
+            position: relative;
+            margin-bottom: 8px;
+            
+            @include font(20, 20*1.2, 600);
+            color: $grey4;
+        }
+
+        .text {
+            position: relative;
+            
+            @include font(15, 15*1.8, 400);
+            color: $grey10;
+           
+        }
+    }
+}

@@ -1,0 +1,55 @@
+
+/*** 
+
+====================================================================
+	Project Section Three
+====================================================================
+
+***/
+
+.project-section-three {
+    position: relative;
+    padding-top: 40px;
+
+    .filters {
+        position: relative;
+        @include position((b, 25px), (t, 38px));
+       
+
+        li {
+            position: relative;
+            display: inline-block;
+
+            @include position((l, 35px), (b, 10px));
+            padding: 0px 0px;
+            
+            @include font(16, 24, 600);
+            text-transform: capitalize;
+            
+            color: $grey23;
+            
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &.active {
+                color: $grey5;
+            }
+            
+        }
+    }
+    .filter-list {
+        margin: 0px -1px;
+    }
+
+    .gallery-item {
+        padding: 0px 1px;
+        margin-bottom: 2px;
+    }
+
+    .style-two {
+        padding-top: 95px;
+    }
+    
+}
+

@@ -1,0 +1,86 @@
+/*** 
+
+====================================================================
+	Main Slider 
+====================================================================
+
+***/
+.details-column {
+    position: relative;
+    z-index: 10;
+
+    padding: 30px;
+    /*background-image: url(../../images/bg2.jpg);*/
+    background-color: $grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+}
+
+
+.view-projects {
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.hero {
+    width: 100%;
+    //padding: 150px 0;
+    padding: 10vmax 0;
+    margin-top: 70px;
+
+    position: relative;
+    z-index: 1;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: $black;
+    color: $white;
+
+    @include flex(flex, initial, center, initial);
+    flex-direction: column;
+
+    @include maw(528){
+        @include padding((t, 40px), (b, 40px));
+    }
+
+    h1 {
+        margin-bottom: 22px;
+    }
+
+
+    .content {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .row {
+        padding: 0 15px;
+    }
+}
+
+
+/*** 
+
+====================================================================
+	Main Slider Two
+====================================================================
+
+***/
+
+
+
+.fixed-footer {
+    position: relative;
+    text-align: center;
+
+    & .copyright {
+        @include position(absolute, (t, 0), (l, 0));
+        width: 100%;
+        padding: 22px 0px;
+
+        @include font(15, 24, $ffText);
+        color: $grey15;
+    }
+}

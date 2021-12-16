@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{- partial "header.html" . -}}
+
+{{ if .Params.hero_title }}
+{{ if  in .URL "privacy" }} 
+<style>
+	body.service-tax .main-slider, .main-page .main-slider {
+		height: 280px;
+	}
+</style>
+{{ end }}
+
+{{- partial "_hero.html" . -}}
+
+{{ end }}
+
+
+{{- partial "_breadcrumbs.html" . -}}
+<article class="page-main"> 
+	<section class="page-container">
+		<div class="page-content">
+			
+		
+				
+				{{ if .Content }}
+					{{.Content }}
+				{{ end }}
+
+			
+		
+		</div>
+	</section>
+
+
+</article>
+{{- partial "_contacts.html" . -}}
+{{- partial "footer.html" . -}}
+
+{{ end }}

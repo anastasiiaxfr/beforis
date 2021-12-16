@@ -1,0 +1,125 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: CONFIG
+- type: directory
+  path: ''
+  label: config
+  create: all
+  match: "*.toml"
+  new_doc_ext: toml
+- type: directory
+  path: /i18n
+  label: i18n
+  create: all
+  match: "**/*"
+- type: directory
+  path: /data
+  label: data
+  create: all
+  match: "**/*"
+- type: directory
+  path: /content
+  label: content
+  create: all
+  match: "**/*"
+- type: heading
+  label: Registration
+- type: directory
+  path: /content/en/registration
+  label: Registration (en)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: /content/ru/registration
+  label: Registration (ru)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: heading
+  label: License
+- type: directory
+  path: /content/en/license
+  label: License (en)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: /content/ru/license
+  label: License (ru)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: heading
+  label: Account
+- type: directory
+  path: /content/en/account
+  label: Account (en)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: /content/ru/account
+  label: Account (ru)
+  create: documents
+  match: "**/*"
+  templates:
+  - post
+- type: heading
+  label: Taxation
+- type: document
+  path: /content/en/taxation.md
+  label: Taxation (en)
+- type: document
+  path: /content/ru/taxation.md
+  label: Taxation (ru)
+- type: heading
+  label: Merchant
+- type: document
+  path: /content/en/merchant.md
+  label: Merchant (en)
+- type: document
+  path: /content/ru/merchant.md
+  label: Merchant (ru)
+- type: heading
+  label: Maintenance
+- type: document
+  path: /content/en/maintenance.md
+  label: Maintenance (en)
+- type: document
+  path: /content/ru/maintenance.md
+  label: Maintenance (ru)
+- type: heading
+  label: Privacy
+- type: document
+  path: /content/en/privacy.md
+  label: Privacy (en)
+- type: document
+  path: /content/ru/privacy.md
+  label: Privacy (ru)
+upload_dir: /static/images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.58.2
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.58.2

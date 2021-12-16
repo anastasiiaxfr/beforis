@@ -1,0 +1,72 @@
+
+/*** 
+
+====================================================================
+	Call Back Section
+====================================================================
+
+***/
+
+.in-touch-section {
+    position: relative;
+    background: $grey url(../../images/resource/pattern-3.png) left bottom no-repeat;
+
+    .outer-container {
+        position: relative;
+
+        .left-column {
+            position: relative;
+            width: 50%;
+            float: left;
+
+            .content {
+                position: relative;
+                float: right;
+                max-width: 600px;
+                width: 100%;
+                padding: 95px 100px 80px 15px;
+            }
+
+            h2 {
+                position: relative;
+                margin-bottom: 25px;
+                display: inline-block;
+
+                color: $white;
+                
+                @include font(35, 35*1.2, 700);
+
+                &:after {
+                    content: "";
+
+                    @include position(absolute, (l, 10%), (b, 5px));
+                    @include sz(40px, 2px);
+                 
+                    background-color: $white;
+                }
+            }
+            
+        }
+
+        .right-column {
+            @include position(absolute, (r, 0));
+            float: left;
+           
+            @include sz(50%, 100%);
+            min-height: 400px;
+
+            .map-outer .map-canvas {
+                @include position(absolute, (r, 0));
+                @include sz(100%, 100%);
+                min-height: 400px;
+            }
+        }
+        
+    }
+
+}
+
+
+
+
+

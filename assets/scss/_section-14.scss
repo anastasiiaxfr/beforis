@@ -1,0 +1,62 @@
+
+/*Skills Section*/
+
+.skills .skill-item {
+    position: relative;
+    margin-bottom: 25px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    .skill-bar {
+        position: relative;
+        @include sz(100%, 3px);
+     
+
+        .bar-inner {
+            position: relative;
+            overflow: hidden;
+            @include sz(100%, 3px);
+            background: rgba($white, 0.1);
+
+            .bar {
+                position: absolute;
+                @include position(absolute, (l, 0), (t, 0));
+                @include sz(0, 3px);
+                border-bottom: 3px solid $grey;
+                transition: all 2000ms ease;
+            }
+            
+        }
+    }
+    
+    .skill-header {
+        position: relative;
+        margin-bottom: 8px;
+        line-height: 30px;
+
+        .skill-title {
+            position: relative;
+
+            float: left;
+            color: $white;
+            @include font(14, 14, 400, $ffHeading);
+            text-transform: capitalize;
+        }
+        
+    }
+
+    .skill-percentage {
+        position: relative;
+        float: right;
+        color: $white;
+        
+        @include font(15, 15, 400, $ffHeading);
+        text-transform: uppercase;
+    }
+    
+}
+
+
+

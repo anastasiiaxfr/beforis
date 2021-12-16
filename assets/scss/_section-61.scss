@@ -1,0 +1,75 @@
+
+.project-description {
+    position: relative;
+    margin-top: 40px;
+
+    .content-column {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .big-image {
+        position: relative;
+
+        @include mg(mt, 20px);
+        @include mg(mb, 50px);
+       
+    }
+
+    .image {
+        position: relative;
+        margin-bottom: 30px;
+
+        &-column {
+            position: relative;
+        }
+    
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    h3 {
+        position: relative;
+        margin-bottom: 16px;
+
+        @include font(28, 28*1.2, 700);
+        color: $grey4;
+    }
+
+    h5 {
+        position: relative;
+        margin-bottom: 12px;
+        
+        @include font(20, 20, 400, $ffText);
+        color: $grey4;
+        
+       
+    }
+
+    .text {
+        position: relative;
+        margin-bottom: 50px;
+
+        p {
+            position: relative;
+            margin-bottom: 20px;
+           
+            color: $grey15;
+            @include font(16, 16*1.7, 400);
+            
+        }
+
+        h4 {
+            position: relative;
+            margin-bottom: 12px;
+            
+            color: $grey4;
+            @include font(20, 20, 500);
+        }
+        
+    }
+    
+}

@@ -1,0 +1,402 @@
+.copyright {
+    a {
+        display: block;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+            color: $grey5;
+        }
+    }
+}
+
+
+.fee {
+    &-subtitle {
+        margin-top: 16px;
+        
+        @include font(16, 16*1.6, 700, $ffHeading);
+    }
+
+    &-section {
+        padding: 0 15px;
+    
+        .sec-title {
+            margin-bottom: 50px;
+        }
+    
+        .content-column .inner-column {
+            position: relative;
+        }
+    
+        // .content-column {
+        //     padding: 90px 40px;
+        // }
+    
+        &--account .content-column {
+            padding: 0 40px;
+        }
+    }
+    
+}
+
+.studio-section {
+    position: relative;
+
+    .content-column {
+        position: relative;
+
+        .inner-column .text {
+            position: relative;
+            margin-bottom: 20px;
+    
+            p {
+                position: relative;
+                margin-bottom: 25px;
+
+                @include font(16, 16*1.8, 400);
+            }
+        }
+    }
+
+    .list-style-four li {
+        font-weight: 700;
+    }
+    
+}
+
+
+
+.lead {
+    & > p {
+
+        @include font(16, 26, 600, $ffText);
+
+        & + p {
+            margin-top: 25px;
+        }
+    }
+}
+
+
+
+ul {
+    .bullets {
+        margin-left: 17px;
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    &.checks {
+        li {
+            position: relative;
+            width: 100%;
+            padding-left: 29px;
+            margin-bottom: 21px;
+
+            @include font(16, 16*1.8, 500, $ffHeading);
+            
+            p {
+                margin: 0;
+            }
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                display: block;
+                content: " ";
+              
+                @include position(absolute, (t, 6px), (b, 0), (r, 0), (l, 0));
+                @include sz(16px, 16px);
+                
+                background-image: url("../../images/icons/check.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            
+            .auto-container & {
+                margin-bottom: 8px;
+            }
+
+            @include maw(728){
+                @include font(14, 14*1.8, 500, $ffHeading);
+
+            }
+
+            @include maw(528){
+                width: 80%;
+                margin: 0 auto;
+
+               
+            }
+        }
+      
+        
+        &.checks--big {
+            li {
+                width: 100%;
+                margin-bottom: 40px;
+                padding-left: 64px;
+
+                @include maw(528){
+                    width: 100%;
+                }
+    
+                &:before {
+                    @include sz(37px, 39px);
+                    @include position(absolute, (t, 0), (b, auto), (r, auto));
+                    margin: auto;
+                    background-image: url("../../images/icons/checkmark.svg");
+                }
+        
+                .page--account & {
+                    margin-bottom: 40px;
+                }
+
+                h3 {
+                    width: 100%;
+                    @include font(16, 16*1.5, 700, $ffHeading);
+                }
+                
+                p {
+            
+                    margin-bottom: 40px;
+
+                 
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @include maw(968){ 
+                        @include font(14, 27, 500, $ffHeading);
+                    }
+
+                   .page--taxation &, .page--account &, .page--license &, .page--merchant & {
+                       
+                            margin-top: 8px;
+                            @include font(14, 14*1.6, 500, $ffText);
+                        
+                    }
+                      
+                }
+    
+               
+            }
+        }
+    
+      
+        &.checks--hollow {
+            li:before {
+                background-image: url("../../images/icons/check-2.svg");
+            }
+        }
+          
+        &.list-location {
+    
+            margin-bottom: 0;
+            column-count: 4;
+    
+            li {
+                margin-bottom: 12px;
+                padding-left: 36px;
+    
+                @include font(16, 16*1.5, 700);
+                
+                @include maw(568){ 
+                    @include margin((t, 20px), (b, 20px));
+                    @include font(13, 13, 700, $ffHeading);
+
+                    &::before {
+                        transform: scale(0.8);
+                    }
+                }
+
+                a {
+                    color: $grey4;
+                }
+    
+                &:before {
+                    @include sz(26px, 26px);
+                    top: 0;
+                   
+                    background-repeat: no-repeat;
+                    background-image: url("../../images/icons/loc.png");
+                }
+
+               
+            }
+    
+            &--license {
+                max-width: 60%;
+                column-count: 2;
+            }
+        }
+    
+    }
+}
+
+.text {
+    p {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    &--main {
+        margin-bottom: 40px;
+
+        color: $grey;
+        text-align: center;
+        @include font(28, 28*1.2, 700, $ffHeading);
+
+        @include maw(528){
+            @include font(20, 20*1.2, 700, $ffHeading);
+        }
+    }
+}
+
+%inner_p {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+h1 {
+    margin-bottom: 22px;
+    @include font(42, 42*1.2, 700, $ffHeading);
+    letter-spacing: 0px;
+    color: inherit;
+
+    p {
+        @extend %inner_p;
+    }
+
+    @include maw(928){
+        @include font(36, 36*1.2, 700, $ffHeading);
+        @include margin((t, 15px), (b, 30px));
+    }
+
+    @include maw(728){
+        @include font(36, 36*1.2, 700, $ffHeading);
+        @include margin((t, 15px), (b, 30px));
+    }
+
+    @include maw(528){
+        @include font(26, 26*1.2, 700, $ffHeading);
+    }
+}
+
+
+
+h2 {
+    @include font(34, 42, 700, $ffHeading);
+    margin-top: 0;
+
+    p {
+        margin: 0;
+    }
+
+    @include maw(728){
+        @include font(28, 28, 700, $ffHeading);
+    }
+
+
+    @include maw(568){
+        @include font(22, 22, 700, $ffHeading);
+    }
+   
+}
+
+h3 {
+    p {
+        margin: 0;
+        line-height: 1;
+    }
+    
+}
+
+h4 {
+    @include font(22, 1.5*22, 700, $ffText);
+    @include margin((t, 16px), (b, 26px));
+
+    @include maw(568){
+        @include font(15, 20, 700, $ffHeading);
+        margin-top: 20px;
+    }
+   
+}
+
+h5 {
+    @include font(16, 1.6*16, 700, $ffHeading);
+    @include margin((t, 16px), (b, 26px));
+
+    @include maw(568){
+        @include margin((t, 25px), (b, 25px));
+        @include font(14, 18, 700, $ffHeading);
+    }
+  
+}
+
+h6 {
+    @include font(18, 18*1.8, 600, $ffText);
+    @include margin((t, 7px), (b, 40px));
+
+    @include maw(568){
+        @include font(16, 16, 700, $ffHeading);
+        margin-top: 20px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    p {
+        margin: 0;
+        @extend %inner_p;
+    }
+    @include maw(728){
+        p {
+            display: inline;
+        }
+    }
+}
+
+.heading {
+    &_sup {
+        position: relative;
+      
+        @include font(16, 16*1.5, 600, $ffHeading);
+        text-transform: uppercase;
+        color: $grey;
+
+        p {
+           margin: 0;
+           line-height: inherit;
+        }
+        .hero & {
+            margin-bottom: 2px;
+        }
+    }
+    &_sub {
+        animation-duration: 6s;
+        position: relative;
+      
+        opacity: .7;
+        @include font(18, 18*1.22, 500, $ffHeading);
+        p {
+           margin: 0;
+           line-height: inherit;
+        }
+        .hero & {
+            margin-bottom: 40px;
+        }
+
+        @include maw(528){
+            @include font(14, 14*1.4, 500, $ffHeading);
+        }
+    }
+}

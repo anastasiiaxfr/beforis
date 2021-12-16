@@ -1,0 +1,37 @@
+.feature-block {
+    position: relative;
+    margin-bottom: 20px;
+
+    .inner-box {
+        position: relative;
+        padding-left: 90px;
+
+        .text {
+            position: relative;
+            color: $grey15;
+            line-height: 1.6em;
+        }
+
+        .icon-box {
+            @include position(absolute, (l, 0), (t, 0));
+            
+            margin-bottom: 25px;
+            color: $grey;
+
+            @include font(56, 56, 400);
+         
+            h3 {
+                position: relative;
+                margin-bottom: 8px;
+                
+                @include font(20, 20*1.2, 600);
+
+                a {
+                    color: $grey4;
+                }
+            }
+        }
+        
+    }
+}
+
