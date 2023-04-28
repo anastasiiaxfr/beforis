@@ -11,8 +11,8 @@ for (let i = 0; i < field_phone.length; i++) {
 }
 
 
-const token = '1963226235:AAF-MiJXOgxKFxONVW4qhQ4SQLPWlA6q1PE';
-const chat_id = '-530590199';
+const token = '5601478768:AAFQjTOcFqol4WXcUwNf5JPEya8TJZIaHNo';
+const chat_id = '5125757387';
 
 const date = new Date().toLocaleString();
 
@@ -31,7 +31,7 @@ let validateForms = function(selector, rules, callback) {
                 url: 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&parse_mode=html' + '&text=' + encodeURIComponent(msg),
                 method: 'POST',
                 data: {
-                    chat_id: $('-530590199').val(),
+                    chat_id: $('5125757387').val(),
                     text: $('input').val()
                 },
                 success: function() {
